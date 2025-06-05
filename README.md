@@ -20,7 +20,7 @@ Como transformar literatura em estampa de camiseta?
 | [Perfusão de Ideias](./perfusao-de-ideias) | Narrativas combinatoriais | 🧠 Protótipo conceitual |
 | [Monte Carlo dos Alinhamentos](./monte-carlo-alinhamentos) | Geometria, probabilidade | ✅ Pronto |
 | [Círculos no Mapa](./map-circles) | Geometria, população | ✅ Pronto |
-| [Shoelace Simulator](./map-circles) | Geometria | ✅ Pronto |
+| [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto |
 | [Urbanismo Sintético](./urbanismo-sintetico) | Tráfego, simulação | 🧪 Em protótipo |
 | [Camisetas Literárias](./tshirts-literarias) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 
