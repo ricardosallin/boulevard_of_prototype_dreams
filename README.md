@@ -12,7 +12,7 @@ Como transformar literatura em estampa de camiseta?
 
 ---
 
-## 🔍 Projetos
+## 🔍 Projetos (praticamente todos ainda a publicar)
 
 | Nome | Tema | Status |
 |------|------|--------|
