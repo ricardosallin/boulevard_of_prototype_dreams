@@ -1,3 +1,5 @@
+(most of them broken anyway)
+
 # boulevard_of_prototype_dreams
 Tudo aqui foi feito com ajuda do GPT.
 "Code is a commodity; the thinking behind isn't."
