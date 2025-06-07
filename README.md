@@ -34,6 +34,7 @@ Como transformar literatura em estampa de camiseta?
 | [Simulação de Empresa](./corporation-simulation) | SQL | 👕 Em desenvolvimento |
 | [Clusterização de Cidades](./city-clustering) | Demografia, Python | 👕 Em desenvolvimento |
 | [ETL Simples](./simple-etl) | Python | 👕 Em desenvolvimento |
+| [Nes Map Sticher](./nes-map-stitcher) | Python, PNG, 8-bit | Em desenvolvimento |
 |||
 | [Imagens em BD](./db-image) | Gráficos, SQL | 🧪 Em protótipo |
 | [8-bit Graphics Tools](./8bit-graphics-tools) | Python, Gráficos | 👕 Em desenvolvimento |
