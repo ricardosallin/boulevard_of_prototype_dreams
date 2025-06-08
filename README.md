@@ -64,7 +64,7 @@ Como transformar literatura em estampa de camiseta?
 | [Feriados](./feriados-pra-quem) | Textos | ✅ Pronto (a publicar) |
 | [Perfusão de Ideias](./perfusao-de-ideias) | Narrativas combinatoriais | 🧠 Protótipo conceitual |
 | [Resumos em TikTok](./tiktok-literature) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
-| [Camisetas Literárias](./tshisrts-literarias) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
+| [Camisetas Literárias](./thisrts-literarias) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Ópera-Rock Radio Gaga](./opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Ópera Rock Fulgás](./opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Roteiro Ensaio Sobre a Cegueira](./ensaio-sobre-cegueira) | Teatro | 👕 Em desenvolvimento |
