@@ -65,7 +65,7 @@ Como transformar literatura em estampa de camiseta?
 | [Business Plan Tofu](./tofu-master) | Economia, proteínas | 👕 Em desenvolvimento |
 | [Oferta e Demanda na prática](./oferta-demanda-pratica) | Economia, conceitos | 👕 Em desenvolvimento |
 | [Tributação de Bens Pessoais](./tributacao-bens-pessoais) | Economia, conceitos | 👕 Em desenvolvimento |
-| [Kiss - Discografia Comentada (alguns posts](.kiss-discografia)] | Kiss, música, escrita | Em desenvolvimento |
+| [Kiss - Discografia Comentada (alguns posts](./kiss-discografia) | Kiss, música, escrita | Em desenvolvimento |
 |||
 | [Remake Atari no p5.js](./atari-p5js) | Games Retrô, p5.js | 👕 Em desenvolvimento |
 
