@@ -37,7 +37,7 @@ Como transformar literatura em estampa de camiseta?
 | [Detectando sequências no SQL](./sequence-detection-sql) | SQL | 👕 Em desenvolvimento |
 | [Interpolando valores faltantes no SQL](./value-interpolation-sql) | SQL | 👕 Em desenvolvimento |
 | [Simulador Chi-Squared e Yule's Q](./chi-squared-yules-q) | Estatística, Streamlit | 👕 Em desenvolvimento |
-| [Chutes Estatísticos (inferência)](./chutes-estatísticos) | Estatística com infos parciais | 👕 Em desenvolvimento |
+| [Chutes Estatísticos (inferência)](./chutes-estatisticos) | Estatística com infos parciais | 👕 Em desenvolvimento |
 | [Monitorar API](./api-monitor) | Python, APIs | 👕 Em desenvolvimento |
 | [Automatic Databases](./automatic-databases) | Python, SQL | 👕 Em desenvolvimento |
 | [Treemap na Unha](./treemap-na-unha) | Geometria | 👕 Em desenvolvimento |
@@ -64,7 +64,7 @@ Como transformar literatura em estampa de camiseta?
 | [Feriados](./feriados-pra-quem) | Textos | ✅ Pronto (a publicar) |
 | [Perfusão de Ideias](./perfusao-de-ideias) | Narrativas combinatoriais | 🧠 Protótipo conceitual |
 | [Resumos em TikTok](./tiktok-literature) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
-| [Camisetas Literárias](./tshirts-literarias) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
+| [Camisetas Literárias](./tshisrts-literarias) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Ópera-Rock Radio Gaga](./opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Ópera Rock Fulgás](./opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Roteiro Ensaio Sobre a Cegueira](./ensaio-sobre-cegueira) | Teatro | 👕 Em desenvolvimento |
