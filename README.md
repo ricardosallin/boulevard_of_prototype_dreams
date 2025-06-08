@@ -4,6 +4,8 @@
 Tudo aqui foi feito com ajuda do GPT.
 "Code is a commodity; the thinking behind isn't."
 
+Conforme https://chatgpt.com/c/6840cccb-9464-800d-b1ef-28b3d4b0e53b
+
 # 🧪 Laboratório de Ideias com ChatGPT
 
 Este repositório reúne experimentos que desenvolvi ao longo de conversas com o ChatGPT, misturando Python, SQL(ite), curiosidade e cenários improváveis.
@@ -14,13 +16,21 @@ Como transformar literatura em estampa de camiseta?
 
 ---
 
-## 🔍 Projetos (praticamente todos ainda a publicar)
+## 🔍 Projetos Publicados
+
+| Nome | Tema | Status |
+|------|------|--------|
+| [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto |
+|------|------|--------|
+
+---
+
+## 🔍 Projetos a publicar
 
 | Nome | Tema | Status |
 |------|------|--------|
 | [Monte Carlo e P-Valor](./monte-carlo-alinhamentos) | Geometria, probabilidade | ✅ Pronto (a publicar) |
 | [Círculos no Mapa](./map-circles) | Geometria, população | ✅ Pronto (a publicar) |
-| [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto (a publicar) |
 | [LLM's na Unha](./llms-na-unha) | Redes Neurais, Python, Excel | 👕 Em desenvolvimento |
 | [Criando um DB Agent](./llms-na-unha) | Redes Neurais, Python | 👕 Em desenvolvimento |
 | [Analisador de Múltiplas Variáveis](./multiple-variable-analyzer) | Scores, Versus, Python | 👕 Em desenvolvimento |
@@ -29,6 +39,7 @@ Como transformar literatura em estampa de camiseta?
 | [Interpolando valores faltantes no SQL](./value-interpolation-sql) | SQL | 👕 Em desenvolvimento |
 | [Simulador Chi-Squared e Yule's Q](./chi-squared-yules-q) | Estatística, Streamlit | 👕 Em desenvolvimento |
 | [Chutes Estatísticos (inferência)](./chutes-estatísticos) | Estatística com infos parciais | 👕 Em desenvolvimento |
+| [Monitorar API](./api-monitor) | Python, APIs | 👕 Em desenvolvimento |
 | [Automatic Databases](./automatic-databases) | Python, SQL | 👕 Em desenvolvimento |
 | [Treemap na Unha](./treemap-na-unha) | Geometria | 👕 Em desenvolvimento |
 | [Cálculo de Mapa Astral](./mapa-astral) | Astrologia, Python | 👕 Em desenvolvimento |
@@ -46,7 +57,7 @@ Como transformar literatura em estampa de camiseta?
 |||
 | [TGSS](./tgss) | Demografia, simulação, SQL | 🛠️ Em andamento |
 | [Urbanismo Sintético](./urbanismo-sintetico) | Tráfego, simulação | 🧪 Em protótipo |
-| [Gini Index and Waterlines](./urbanismo-sintetico) | Redistribuição, Gini, SQL | 🧪 Em protótipo |
+| [Gini Index and Waterlines](./gini-waterline) | Redistribuição, Gini, SQL | 🧪 Em protótipo |
 | [Feromônios em SQL](./feromonios-sql) | Demografia, simulação, SQL | 🧪 Em protótipo |
 | [SQLeslie](./sqleslie) | Matrizes de Leslie em SQL+Streamlit | 🛠️ Em andamento |
 |||
@@ -59,13 +70,14 @@ Como transformar literatura em estampa de camiseta?
 | [Ópera Rock Fulgás](./opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Roteiro Ensaio Sobre a Cegueira](./ensaio-sobre-cegueira) | Teatro | 👕 Em desenvolvimento |
 | [Comunicação e logo da Audi](./comunicacao-audi) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
+| [Curso SQL Revolts](./sql-revolts) | SQL, crítica social foda | Em desenvolvimento | 
 |||
 | [Consumo de água](./consumo-agua) | Números fictícios | 👕 Em desenvolvimento |
 | [Consumo de energia](./consumo-energia) | Números fictícios | 👕 Em desenvolvimento |
 | [Business Plan Tofu](./tofu-master) | Economia, proteínas | 👕 Em desenvolvimento |
 | [Oferta e Demanda na prática](./oferta-demanda-pratica) | Economia, conceitos | 👕 Em desenvolvimento |
 | [Tributação de Bens Pessoais](./tributacao-bens-pessoais) | Economia, conceitos | 👕 Em desenvolvimento |
-| [Kiss - Discografia Comentada (alguns posts](./kiss-discografia) | Kiss, música, escrita | Em desenvolvimento |
+| [Kiss - Discografia Comentada (alguns posts)](./kiss-discografia) | Kiss, música, escrita | Em desenvolvimento |
 |||
 | [Remake Atari no p5.js](./atari-p5js) | Games Retrô, p5.js | 👕 Em desenvolvimento |
 
