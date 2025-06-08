@@ -1,4 +1,5 @@
 # 🎯 Monte Carlo dos Alinhamentos
+(conforme https://chatgpt.com/c/6818eba4-6c9c-800d-8d1c-6616e779e0e8)
 
 **Resumo:**  
 Simulação feita para estimar a probabilidade de que, dentre `N` pontos aleatórios em um plano cartesiano, `K` estejam alinhados e/ou igualmente espaçados. O objetivo foi testar critérios como tolerância angular e regularidade de distância entre pontos.
