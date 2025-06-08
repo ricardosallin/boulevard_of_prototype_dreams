@@ -4,3 +4,5 @@ Conforme:
 - https://chatgpt.com/c/68043905-d4ac-800d-b2d6-9440c4e604f2 (nivel 0)
 - https://chatgpt.com/c/68129e20-5390-800d-bd45-dd6197100381 (simulação feromônios)
 - https://chatgpt.com/c/6813bf1a-ac48-800d-b9eb-384749fd8635 (bug - interação ou demografia?)
+- https://chatgpt.com/c/681b6f6a-2154-800d-928d-d168fae4e791 (senoidal no Excel)
+- ??? (distribuição exponencial)
