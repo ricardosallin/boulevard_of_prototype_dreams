@@ -21,7 +21,6 @@ Como transformar literatura em estampa de camiseta?
 | Nome | Tema | Status |
 |------|------|--------|
 | [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto |
-|------|------|--------|
 
 ---
 
