@@ -6,3 +6,5 @@ Conforme:
 - https://chatgpt.com/c/6813bf1a-ac48-800d-b9eb-384749fd8635 (bug - interação ou demografia?)
 - https://chatgpt.com/c/681b6f6a-2154-800d-928d-d168fae4e791 (senoidal no Excel)
 - ??? (distribuição exponencial)
+- https://chatgpt.com/c/681b5d72-0288-800d-a8cc-96d5f02b7440 (tutorial Streamlit)
+- https://chatgpt.com/c/681ab2a8-0960-800d-9bb4-d0c8c781577c (Streamlit + Leslie tables)
