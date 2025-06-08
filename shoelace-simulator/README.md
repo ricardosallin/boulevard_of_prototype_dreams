@@ -1,4 +1,7 @@
 # 📐 Fórmula do Agrimensor (Gauss' Shoelace Theorem)
+Conforme: 
+- https://chatgpt.com/c/6824af4b-b43c-800d-9b95-91d765b25f39 (codigo)
+- https://chatgpt.com/c/684089f9-fafc-800d-b3ba-706c109542c7 (formulas fixas para 3-4-5-6 pontos)
 
 **Resumo:**  
 Este experimento explora a implementação e aplicações da Fórmula do Agrimensor (também conhecida como Shoelace Theorem) para cálculo de áreas de polígonos com vértices dados.
