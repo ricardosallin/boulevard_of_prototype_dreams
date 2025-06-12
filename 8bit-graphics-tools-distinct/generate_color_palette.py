@@ -60,8 +60,28 @@ def create_palette_image(colors, output_path, force_png=True):
     palette_img.save(output_path, format=final_format)
     return output_path
 
+def sort_colors(colors, method="hue"):
+    if method == "hue":
+        return sorted(colors, key=lambda rgb: colorsys.rgb_to_hls(*[v/255 for v in rgb])[0])
+    elif method == "lightness":
+        return sorted(colors, key=lambda rgb: colorsys.rgb_to_hls(*[v/255 for v in rgb])[1])
+    else:
+        return colors  # No sorting
+
 # Atualizando função principal para usar o método seguro
 def generate_color_palette(input_path, output_path, max_colors=20, force_png=True):
     image = Image.open(input_path)
     colors = extract_dominant_colors_safe(image, max_colors)
+    return create_palette_image(colors, output_path, force_png)
+
+def generate_color_palette(input_path, output_path=None, max_colors=20, force_png=True, order_by='hue'):
+    image = Image.open(input_path)
+    colors = extract_dominant_colors_safe(image, max_colors)
+    colors = sort_colors(colors, order_by)
+
+    if output_path is None:
+        base, ext = os.path.splitext(input_path)
+        output_ext = '.png' if force_png else ext
+        output_path = f"{base}_colors{output_ext}"
+
     return create_palette_image(colors, output_path, force_png)
