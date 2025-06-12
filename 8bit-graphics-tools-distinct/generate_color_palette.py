@@ -17,6 +17,17 @@ def extract_dominant_colors(image, max_colors):
     dominant_colors = [tuple(palette[i*3:i*3+3]) for i, _ in color_counts[:max_colors]]
     return dominant_colors
 
+def extract_dominant_colors_safe(image, max_colors):
+    image = image.convert("RGB")
+    colors = image.getcolors(maxcolors=image.width * image.height)
+    if not colors:
+        raise ValueError("Too many colors in image for getcolors(). Try reducing image size or use quantization.")
+    
+    # Sort by count descending and extract RGB tuples
+    sorted_colors = sorted(colors, reverse=True)
+    dominant_colors = [rgb for count, rgb in sorted_colors[:max_colors]]
+    return dominant_colors
+
 def create_palette_image(colors, output_path, force_png=True):
     block_size = (60, 60)
     padding = 10
@@ -49,7 +60,8 @@ def create_palette_image(colors, output_path, force_png=True):
     palette_img.save(output_path, format=final_format)
     return output_path
 
+# Atualizando função principal para usar o método seguro
 def generate_color_palette(input_path, output_path, max_colors=20, force_png=True):
     image = Image.open(input_path)
-    colors = extract_dominant_colors(image, max_colors)
+    colors = extract_dominant_colors_safe(image, max_colors)
     return create_palette_image(colors, output_path, force_png)
