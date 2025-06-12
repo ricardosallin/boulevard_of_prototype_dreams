@@ -85,3 +85,65 @@ def generate_color_palette(input_path, output_path=None, max_colors=20, force_pn
         output_path = f"{base}_colors{output_ext}"
 
     return create_palette_image(colors, output_path, force_png)
+
+import tkinter as tk
+from tkinter import filedialog, messagebox
+from tkinter import ttk
+
+def run_gui():
+    def select_input_file():
+        path = filedialog.askopenfilename(
+            title="Selecione a imagem",
+            filetypes=[("Imagens", "*.png *.jpg *.jpeg *.bmp *.gif")],
+        )
+        if path:
+            input_path_var.set(path)
+
+    def generate_palette():
+        input_path = input_path_var.get()
+        max_colors = max_colors_var.get()
+        force_png = force_png_var.get()
+        order_by = order_by_var.get()
+
+        if not input_path:
+            messagebox.showerror("Erro", "Selecione uma imagem de entrada.")
+            return
+
+        try:
+            output_path = generate_color_palette(
+                input_path=input_path,
+                output_path=None,
+                max_colors=int(max_colors),
+                force_png=bool(force_png),
+                order_by=order_by
+            )
+            messagebox.showinfo("Sucesso", f"Paleta gerada com sucesso:\n{output_path}")
+        except Exception as e:
+            messagebox.showerror("Erro ao gerar paleta", str(e))
+
+    # GUI setup
+    root = tk.Tk()
+    root.title("Gerador de Paleta de Cores")
+
+    input_path_var = tk.StringVar()
+    max_colors_var = tk.IntVar(value=20)
+    force_png_var = tk.BooleanVar(value=True)
+    order_by_var = tk.StringVar(value="hue")
+
+    tk.Label(root, text="Imagem de entrada:").grid(row=0, column=0, sticky="e")
+    tk.Entry(root, textvariable=input_path_var, width=40).grid(row=0, column=1)
+    tk.Button(root, text="Selecionar...", command=select_input_file).grid(row=0, column=2)
+
+    tk.Label(root, text="Máx. de cores:").grid(row=1, column=0, sticky="e")
+    tk.Spinbox(root, from_=1, to=256, textvariable=max_colors_var, width=5).grid(row=1, column=1, sticky="w")
+
+    tk.Label(root, text="Ordenar por:").grid(row=2, column=0, sticky="e")
+    ttk.Combobox(root, textvariable=order_by_var, values=["hue", "lightness", "none"], width=10).grid(row=2, column=1, sticky="w")
+
+    tk.Checkbutton(root, text="Forçar saída PNG", variable=force_png_var).grid(row=3, column=1, sticky="w")
+
+    tk.Button(root, text="Gerar Paleta", command=generate_palette).grid(row=4, column=1, pady=10)
+
+    root.mainloop()
+
+run_gui()
