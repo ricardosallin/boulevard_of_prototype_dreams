@@ -46,13 +46,14 @@ Como transformar literatura em estampa de camiseta?
 | [Simulação de Empresa](./corporation-simulation) | SQL | 👕 Em desenvolvimento |
 | [Clusterização de Cidades](./city-clustering) | Demografia, Python | 👕 Em desenvolvimento |
 | [ETL Simples](./simple-etl) | Python | 👕 Em desenvolvimento |
-| [Nes Map Sticher](./nes-map-stitcher) | Python, PNG, 8-bit | Em desenvolvimento |
+| [Remake Atari no p5.js](./atari-p5js) | Games Retrô, p5.js | 👕 Em desenvolvimento |
 |||
 | [Imagens em BD](./db-image) | Gráficos, SQL | 🧪 Em protótipo |
 | [8-bit Graphics Tools](./8bit-graphics-tools) | Python, Gráficos | 👕 Em desenvolvimento |
 | [8-bit Graphics - Finding wrong color pixels](./8bit-graphics-tools-pixels) | Python, Gráficos | 👕 Em desenvolvimento |
 | [8-bit Graphics - Distinct Colors](./8bit-graphics-tools-distinct) | Python, Gráficos | 👕 Em desenvolvimento |
 | [Corte de Imagens JPG](./8bit-graphics-tools-cuts) | Python, Gráficos | 👕 Em desenvolvimento |
+| [Nes Map Sticher](./nes-map-stitcher) | Python, PNG, 8-bit | Em desenvolvimento |
 |||
 | [TGSS](./tgss) | Demografia, simulação, SQL | 🛠️ Em andamento |
 | [Urbanismo Sintético](./urbanismo-sintetico) | Tráfego, simulação | 🧪 Em protótipo |
@@ -68,6 +69,7 @@ Como transformar literatura em estampa de camiseta?
 | [Ópera-Rock Radio Gaga](./opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Ópera Rock Fulgás](./opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Roteiro Ensaio Sobre a Cegueira](./ensaio-sobre-cegueira) | Teatro | 👕 Em desenvolvimento |
+| [Kiss - Discografia Comentada (alguns posts)](./kiss-discografia) | Kiss, música, escrita | Em desenvolvimento |
 | [Comunicação e logo da Audi](./comunicacao-audi) | Moda, cultura pop, ironia | 👕 Em desenvolvimento |
 | [Curso SQL Revolts](./sql-revolts) | SQL, crítica social foda | Em desenvolvimento | 
 |||
@@ -76,9 +78,7 @@ Como transformar literatura em estampa de camiseta?
 | [Business Plan Tofu](./tofu-master) | Economia, proteínas | 👕 Em desenvolvimento |
 | [Oferta e Demanda na prática](./oferta-demanda-pratica) | Economia, conceitos | 👕 Em desenvolvimento |
 | [Tributação de Bens Pessoais](./tributacao-bens-pessoais) | Economia, conceitos | 👕 Em desenvolvimento |
-| [Kiss - Discografia Comentada (alguns posts)](./kiss-discografia) | Kiss, música, escrita | Em desenvolvimento |
 |||
-| [Remake Atari no p5.js](./atari-p5js) | Games Retrô, p5.js | 👕 Em desenvolvimento |
 
 ---
 
