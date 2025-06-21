@@ -7,66 +7,90 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
         #map {
-            height: 100vh;
+            height: 90vh;
             width: 100%;
+        }
+        #controls {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+        }
+        #radiusInput {
+            width: 300px;
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
+    <div id="controls">
+        <label for="radiusInput">Raio (km): </label>
+        <input type="range" id="radiusInput" min="1" max="500" value="100">
+        <span id="radiusValue">100</span> km
+    </div>
 
-<script>
-    var map = L.map('map').setView([0, 0], 2);
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([0, 0], 2);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Função para enviar os dados para o backend
-    function sendCircleData(lat, lng, radius) {
-        fetch('/process_circle', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                lat: lat,
-                lng: lng,
-                radius: radius
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Sucesso:', data);
-            alert('População estimada: ' + data.estimated_population);
-        })
-        .catch((error) => {
-            console.error('Erro:', error);
-        });
-    }
-
-    // Função para adicionar um marcador e círculo ao clicar no mapa
-    function onMapClick(e) {
-        var marker = L.marker(e.latlng).addTo(map);
-
-        // Criar um círculo ao redor do marcador com raio de 100km (100000 metros)
-        var radius = 100000;
-        var circle = L.circle(e.latlng, {
-            color: 'blue',
-            fillColor: '#30f',
-            fillOpacity: 0.5,
-            radius: radius
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        // Enviar os dados para o backend
-        sendCircleData(e.latlng.lat, e.latlng.lng, radius);
+        var radius = 100000;  // Valor inicial em metros (100 km)
 
-        console.log("Coordenadas: " + e.latlng);
-    }
+        // Atualiza o valor do raio ao mover o slider
+        var radiusInput = document.getElementById('radiusInput');
+        var radiusValue = document.getElementById('radiusValue');
+        radiusInput.oninput = function() {
+            radiusValue.innerHTML = this.value;
+            radius = this.value * 1000;  // Converter para metros
+        };
 
-    map.on('click', onMapClick);
-</script>
+        // Função para enviar os dados para o backend
+        function sendCircleData(lat, lng, radius) {
+            fetch('/process_circle', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    lat: lat,
+                    lng: lng,
+                    radius: radius
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Sucesso:', data);
+                alert('População estimada: ' + data.estimated_population);
+            })
+            .catch((error) => {
+                console.error('Erro:', error);
+            });
+        }
 
+        // Função para adicionar um marcador e círculo ao clicar no mapa
+        function onMapClick(e) {
+            var marker = L.marker(e.latlng).addTo(map);
 
+            // Criar um círculo ao redor do marcador com o raio dinâmico
+            var circle = L.circle(e.latlng, {
+                color: 'blue',
+                fillColor: '#30f',
+                fillOpacity: 0.5,
+                radius: radius  // Raio ajustável
+            }).addTo(map);
+
+            // Enviar os dados para o backend
+            sendCircleData(e.latlng.lat, e.latlng.lng, radius);
+
+            console.log("Coordenadas: " + e.latlng);
+        }
+
+        // Escuta o evento de clique no mapa
+        map.on('click', onMapClick);
+    </script>
 </body>
 </html>
