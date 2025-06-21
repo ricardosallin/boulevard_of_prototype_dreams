@@ -54,6 +54,12 @@
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
+            // Verifica se a tecla Ctrl está pressionada para decidir se vai remover o círculo
+            if (e.originalEvent.ctrlKey) {
+                removerCirculo(e.latlng);  // Chama a função de remoção
+                return;  // Não criar novo círculo se estiver removendo
+            }
+
             var marker = L.marker(e.latlng).addTo(map);
 
             var circle = L.circle(e.latlng, {
@@ -92,31 +98,30 @@
             });
         }
 
-        // Remover círculo ao pressionar Ctrl + clique
-        function removerCirculo(e) {
-            if (e.originalEvent.ctrlKey) {
-                let nearestCircle = null;
-                let minDistance = Infinity;
+        // Função para remover o círculo mais próximo do ponto clicado
+        function removerCirculo(latlng) {
+            let nearestCircle = null;
+            let minDistance = Infinity;
 
-                circles.forEach(function(circleData) {
-                    let distance = map.distance(e.latlng, circleData.circle.getLatLng());
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        nearestCircle = circleData;
-                    }
-                });
-
-                if (nearestCircle && minDistance < radius) {
-                    map.removeLayer(nearestCircle.circle);
-                    map.removeLayer(nearestCircle.marker);
-                    circles = circles.filter(c => c.circle !== nearestCircle.circle);
+            // Encontrar o círculo mais próximo
+            circles.forEach(function(circleData) {
+                let distance = map.distance(latlng, circleData.circle.getLatLng());
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    nearestCircle = circleData;
                 }
+            });
+
+            // Se houver um círculo próximo, removê-lo
+            if (nearestCircle && minDistance < radius) {
+                map.removeLayer(nearestCircle.circle);
+                map.removeLayer(nearestCircle.marker);
+                circles = circles.filter(c => c.circle !== nearestCircle.circle);
             }
         }
 
-        // Adicionar eventos de clique no mapa
+        // Adicionar evento de clique no mapa
         map.on('click', onMapClick);
-        map.on('click', removerCirculo);
     </script>
 </body>
 </html>
