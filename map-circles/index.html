@@ -30,7 +30,9 @@
         <input type="range" id="radiusInput" min="1" max="500" value="100">
         <span id="radiusValue">100</span> km
     </div>
-
+    <!-- Adicione o elemento para exibir a população -->
+    <div id="populacao-display">População estimada: 0</div>
+    
     <script>
         var map = L.map('map').setView([0, 0], 2);  // Ponto inicial no centro do mundo
 
@@ -58,7 +60,6 @@
             });
         };
 
-
         // Função para atualizar a população ao criar, mover ou ajustar o círculo
         function atualizarPopulacao(centro, raio) {
             console.log("Calculando população para:", centro, "com raio:", raio, "km");
@@ -75,12 +76,16 @@
             .then(response => response.json())
             .then(data => {
                 const populacao = data.estimated_population;
-                console.log(`População estimada: ${populacao}`);  // Exibir no console
-                document.getElementById('populacao-display').innerText = `População estimada: ${populacao}`;
+                console.log(`População estimada: ${populacao}`);
+                const displayElement = document.getElementById('populacao-display');
+                if (displayElement) {
+                    displayElement.innerText = `População estimada: ${populacao}`;
+                } else {
+                    console.error('Elemento #populacao-display não encontrado.');
+                }
             })
             .catch(error => console.error('Erro ao calcular população:', error));
         }
-
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
