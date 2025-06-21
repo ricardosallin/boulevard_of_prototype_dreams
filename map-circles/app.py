@@ -119,11 +119,15 @@ def calcular_populacao_no_circulo_rapido(centro_circulo, raio_km, transform, den
     linha_min, coluna_min = coordenadas_para_indice(lon_min, lat_min, transform)
     linha_max, coluna_max = coordenadas_para_indice(lon_max, lat_max, transform)
     
+    # Garantir que os índices estão na ordem correta
+    linha_min, linha_max = min(linha_min, linha_max), max(linha_min, linha_max)
+    coluna_min, coluna_max = min(coluna_min, coluna_max), max(coluna_min, coluna_max)
+    
     populacao_total = 0
 
     # Iterar apenas sobre as células dentro da Bounding Box
-    for row in range(linha_min, linha_max):
-        for col in range(coluna_min, coluna_max):
+    for row in range(linha_min, linha_max + 1):
+        for col in range(coluna_min, coluna_max + 1):
             # Converter índice de volta para coordenadas geográficas
             lon, lat = transform * (col, row)
             
@@ -133,6 +137,7 @@ def calcular_populacao_no_circulo_rapido(centro_circulo, raio_km, transform, den
                 populacao_total += densidade[row, col]
     
     return populacao_total
+
 
 # # Exemplo de círculo em Brasília (-47.9292, -15.7801) com raio de 10 km
 # centro_circulo = (-47.9292, -15.7801)
