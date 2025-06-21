@@ -63,7 +63,50 @@
             });
         };
 
-        // Função para atualizar a população ao criar ou mover um círculo
+        // Função para calcular a cor com base na população (mais populoso: vermelho, menos: azul)
+        function getCorPorPopulacao(populacao, minPop, maxPop) {
+            // Evitar divisão por zero
+            if (maxPop === minPop) return '#ff0000';  // Caso todos os valores sejam iguais, usa vermelho
+        
+            // Calcular a intensidade da cor com base na população
+            const intensidade = (populacao - minPop) / (maxPop - minPop);
+            const r = Math.round(255 * intensidade);  // Canal vermelho aumenta com a população
+            const b = Math.round(255 * (1 - intensidade));  // Canal azul diminui com a população
+            return `rgb(${r}, 0, ${b})`;
+        }
+        
+        // Função para atualizar as cores dos círculos com base na população
+        function atualizarCoresCirculos() {
+            // Encontrar as populações mínima e máxima entre todos os círculos
+            let minPop = Infinity, maxPop = -Infinity;
+        
+            circles.forEach(function(circleData) {
+                const populacao = circleData.tooltip._population || 0;
+                if (populacao < minPop) minPop = populacao;
+                if (populacao > maxPop) maxPop = populacao;
+            });
+        
+            // Aplicar cor a cada círculo com base na população
+            circles.forEach(function(circleData) {
+                const populacao = circleData.tooltip._population || 0;
+                const cor = getCorPorPopulacao(populacao, minPop, maxPop);
+                circleData.circle.setStyle({ color: cor, fillColor: cor });
+            });
+        }
+        
+        // Atualizar o total de população e as cores dos círculos
+        function atualizarPopulacaoTotal() {
+            let totalPopulacao = 0;
+            circles.forEach(function(circleData) {
+                totalPopulacao += circleData.tooltip._population || 0;
+            });
+            document.getElementById('totalPopulacao').innerText = `População total: ${totalPopulacao.toLocaleString('pt-BR')}`;
+        
+            // Atualizar a cor dos círculos com base na população
+            atualizarCoresCirculos();
+        }
+        
+        // Chamar atualizarCoresCirculos sempre que a população é atualizada
         function atualizarPopulacao(centro, raio, tooltip, isUpdateTotal = false) {
             fetch('/process_circle', {
                 method: 'POST',
@@ -81,10 +124,8 @@
                 tooltip.setContent(`População: ${populacao.toLocaleString('pt-BR')}`);
                 tooltip.update();
                 
-                // Atualizar o valor da população no objeto
                 tooltip._population = populacao;
                 
-                // Se necessário, atualizar o total de população
                 if (isUpdateTotal) {
                     atualizarPopulacaoTotal();
                 }
@@ -92,14 +133,6 @@
             .catch(error => console.error('Erro ao calcular população:', error));
         }
 
-        // Função para calcular e exibir a população total de todos os círculos
-        function atualizarPopulacaoTotal() {
-            let totalPopulacao = 0;
-            circles.forEach(function(circleData) {
-                totalPopulacao += circleData.tooltip._population || 0;
-            });
-            document.getElementById('totalPopulacao').innerText = `População total: ${totalPopulacao.toLocaleString('pt-BR')}`;
-        }
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
