@@ -123,6 +123,42 @@
                 circle: circle
             });
 
+            // Função para enviar dados do círculo ao backend e obter a população estimada
+            function atualizarPopulacao(centro, raio) {
+                fetch('/calcular_populacao', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        centro: centro,  // [lon, lat]
+                        raio: raio       // em km
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const populacao = data.populacao;
+                    console.log(`População estimada no círculo: ${populacao}`);
+                    // Exibir a população no frontend (substitua com seu próprio código)
+                    document.getElementById('populacao-display').innerText = `População: ${populacao}`;
+                })
+                .catch(error => console.error('Erro:', error));
+            }
+            
+            // Chamar a função ao adicionar ou mover um círculo
+            circle.on('dragend', function() {
+                const centro = [circle.getLatLng().lng, circle.getLatLng().lat];
+                const raio = circle.getRadius() / 1000;  // Converter metros para km
+                atualizarPopulacao(centro, raio);
+            });
+            
+            // Chamar a função ao adicionar um novo círculo
+            map.on('click', function(e) {
+                const novoCirculo = L.circle(e.latlng, { radius: 10000 }).addTo(map);  // Exemplo: 10 km de raio
+                atualizarPopulacao([e.latlng.lng, e.latlng.lat], 10);  // 10 km de raio
+            });
+
+            
             // Função para mover o círculo com o botão direito
             circle.on('mousedown', function(e) {
                 if (e.originalEvent.button === 2) {  // Botão direito
