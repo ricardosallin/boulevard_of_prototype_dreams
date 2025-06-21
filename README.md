@@ -17,21 +17,22 @@ Como transformar literatura em estampa de camiseta?
 ---
 
 Status dos projetos:
-|emoji|status|significado|
-|✅|Pronto|Sallin não pretende mais mexer (muito) no projeto. Pode até ser q tenha melhorias ou outras ideias, quem sabe um dia ele resolve pegar pra fazer, mas a princípio o projeto já "deu o que tinha que dar" (Sallin já matou a curiosidade que teve com ele)|
-|🛠️|Mexendo|Sallin anda mexendo nesse projeto, provavelmente tem Commits recentes (mas o próprio status ele não sabe se vai ficar atualizando toda hora direitinho: talvez nem seja usado na prática)|
-|👕|Em desenvolvimento|Sallin não tá mais mexendo, mas ainda não fez tudo que queria nele. Ainda tem coisa que ele quer mexer (provavelmente veio alguma Outra Grande Coisa na frente)|
-|🧪|Protótipo conceitual|Sallin deu só o chute inicial mas (por enquanto) não mexeu mais, mas ainda quer mexer (provavelmente foi só alguma curiosidade aleatória que talvez nem dê mais nada mesmo)|
-|🧠|Ideia|Sallin teve alguma ideia, foi legal na hora, mas não pretende fazer mais nada|
+| emoji | status | significado |
+|-------|--------|-------------|
+| ✅ | Pronto | Sallin não pretende mais mexer (muito) no projeto. Pode até ser q tenha melhorias ou outras ideias, quem sabe um dia ele resolve pegar pra fazer, mas a princípio o projeto já "deu o que tinha que dar" (Sallin já matou a curiosidade que teve com ele) |
+| 🛠️ | Mexendo | Sallin anda mexendo nesse projeto, provavelmente tem Commits recentes (mas o próprio status ele não sabe se vai ficar atualizando toda hora direitinho: talvez nem seja usado na prática) |
+| 👕 | Em desenvolvimento | Sallin não tá mais mexendo, mas ainda não fez tudo que queria nele. Ainda tem coisa que ele quer mexer (provavelmente veio alguma Outra Grande Coisa na frente) |
+| 🧪 | Protótipo conceitual | Sallin deu só o chute inicial mas (por enquanto) não mexeu mais, mas ainda quer mexer (provavelmente foi só alguma curiosidade aleatória que talvez nem dê mais nada mesmo) |
+| 🧠 | Ideia | Sallin teve alguma ideia, foi legal na hora, mas não pretende fazer mais nada |
 
 ---
 
 ## 🔍 Projetos Publicados
 
-| Nome | Tema | Status |
-|------|------|--------|
-| [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto |
-| [Círculos no Mapa](./map-circles) | Geometria, população | ✅ Pronto |
+| Grupo | Nome | Tema | Status |
+|-------|------|------|--------|
+| Pythonices | [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto |
+| Pythonices | [Círculos no Mapa](./map-circles) | Geometria, população | ✅ Pronto |
 
 ---
 
