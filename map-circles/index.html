@@ -47,19 +47,21 @@
         radiusInput.oninput = function() {
             radiusValue.innerHTML = this.value;
             radius = this.value * 1000;  // Converter para metros
-            
+        
             // Atualizar o raio de todos os círculos existentes
             circles.forEach(function(circleData) {
                 circleData.circle.setRadius(radius);
-
+        
                 // Recalcular a população com o novo raio
                 var centro = circleData.circle.getLatLng();
-                atualizarPopulacao([centro.lng, centro.lat], radius / 1000);
+                atualizarPopulacao([centro.lng, centro.lat], radius / 1000);  // Certificar-se que está em km
             });
         };
 
-        // Função para atualizar a população ao criar ou mover um círculo
+
+        // Função para atualizar a população ao criar, mover ou ajustar o círculo
         function atualizarPopulacao(centro, raio) {
+            console.log("Calculando população para:", centro, "com raio:", raio, "km");
             fetch('/process_circle', {
                 method: 'POST',
                 headers: {
@@ -73,10 +75,12 @@
             .then(response => response.json())
             .then(data => {
                 const populacao = data.estimated_population;
+                console.log(`População estimada: ${populacao}`);  // Exibir no console
                 document.getElementById('populacao-display').innerText = `População estimada: ${populacao}`;
             })
-            .catch(error => console.error('Erro:', error));
+            .catch(error => console.error('Erro ao calcular população:', error));
         }
+
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
