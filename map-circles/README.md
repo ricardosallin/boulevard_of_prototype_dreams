@@ -54,6 +54,7 @@ Visualização gerada:
 - geopy
 - folium
 - numpy
+- flask
 
 Instale com:
 
