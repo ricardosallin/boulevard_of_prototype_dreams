@@ -11,16 +11,25 @@
             height: 90vh;
             width: 100%;
         }
-        #populacao-display {
-            padding: 10px;
+        #controls {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #f0f0f0;
-            font-size: 16px;
+        }
+        #radiusInput {
+            width: 300px;
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <div id="populacao-display">População estimada: 0</div>
+    <div id="controls">
+        <label for="radiusInput">Raio (km): </label>
+        <input type="range" id="radiusInput" min="1" max="500" value="100">
+        <span id="radiusValue">100</span> km
+    </div>
 
     <script>
         var map = L.map('map').setView([0, 0], 2);  // Ponto inicial no centro do mundo
@@ -29,8 +38,25 @@
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        var radius = 10000;  // Raio inicial em metros
+        var radius = 100000;  // Valor inicial em metros (100 km)
         var circles = [];  // Lista para armazenar os círculos criados
+
+        // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
+        var radiusInput = document.getElementById('radiusInput');
+        var radiusValue = document.getElementById('radiusValue');
+        radiusInput.oninput = function() {
+            radiusValue.innerHTML = this.value;
+            radius = this.value * 1000;  // Converter para metros
+            
+            // Atualizar o raio de todos os círculos existentes
+            circles.forEach(function(circleData) {
+                circleData.circle.setRadius(radius);
+
+                // Recalcular a população com o novo raio
+                var centro = circleData.circle.getLatLng();
+                atualizarPopulacao([centro.lng, centro.lat], radius / 1000);
+            });
+        };
 
         // Função para atualizar a população ao criar ou mover um círculo
         function atualizarPopulacao(centro, raio) {
@@ -54,12 +80,6 @@
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
-            // Verifica se a tecla Ctrl está pressionada para decidir se vai remover o círculo
-            if (e.originalEvent.ctrlKey) {
-                removerCirculo(e.latlng);  // Chama a função de remoção
-                return;  // Não criar novo círculo se estiver removendo
-            }
-
             var marker = L.marker(e.latlng).addTo(map);
 
             var circle = L.circle(e.latlng, {
