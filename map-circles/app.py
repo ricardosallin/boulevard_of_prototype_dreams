@@ -4,7 +4,7 @@ import rasterio
 app = Flask(__name__)
 
 # Carregar o arquivo de densidade populacional e o objeto transform
-with rasterio.open('path/para/seu/arquivo.tif') as src:
+with rasterio.open('base_pop.tif') as src:
     densidade = src.read(1)  # Lê os dados da primeira banda
     transform = src.transform
 
@@ -53,7 +53,6 @@ def calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade)
 
     return populacao_total
 
-
 # Rota principal para servir o arquivo HTML
 @app.route('/')
 def index():
@@ -68,7 +67,7 @@ def process_circle():
 
     populacao_estimada = calcular_populacao_no_circulo(centro, raio_km, transform, densidade)
 
-    return jsonify({"estimated_population": populacao_estimada})
+    return jsonify({"estimated_population": int(populacao_estimada)})
 
 if __name__ == '__main__':
     app.run(debug=True)
