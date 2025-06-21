@@ -78,6 +78,19 @@ def ponto_dentro_do_circulo(lon, lat, centro_circulo, raio):
     # Verificar se o ponto está dentro do círculo
     return ponto.within(circulo)
 
+# Função para calcular a Bounding Box de um círculo
+def calcular_bounding_box(centro_circulo, raio_km):
+    # Aproximar 1 grau de latitude/longitude como 111 km
+    raio_graus = raio_km / 111
+
+    lon_centro, lat_centro = centro_circulo
+    lon_min = lon_centro - raio_graus
+    lon_max = lon_centro + raio_graus
+    lat_min = lat_centro - raio_graus
+    lat_max = lat_centro + raio_graus
+
+    return lon_min, lon_max, lat_min, lat_max
+
 
 def calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade):
     # Raio do círculo em graus (aproximadamente, depende da latitude)
