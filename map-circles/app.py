@@ -79,5 +79,33 @@ def ponto_dentro_do_circulo(lon, lat, centro_circulo, raio):
     return ponto.within(circulo)
 
 
+def calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade):
+    # Raio do círculo em graus (aproximadamente, depende da latitude)
+    raio_graus = raio_km / 111  # Aproximação de 111 km por grau de latitude
+
+    populacao_total = 0
+    
+    # Iterar sobre as linhas e colunas da matriz de densidade
+    for row in range(densidade.shape[0]):
+        for col in range(densidade.shape[1]):
+            # Converter o índice (linha, coluna) de volta para coordenadas geográficas
+            lon, lat = transform * (col, row)
+            
+            # Verificar se o ponto está dentro do círculo
+            if ponto_dentro_do_circulo(lon, lat, centro_circulo, raio_graus):
+                # Adicionar a densidade dessa célula à população total
+                populacao_total += densidade[row, col]
+    
+    return populacao_total
+
+# # Exemplo de círculo com centro em Brasília (-47.9292, -15.7801) e raio de 10 km
+# centro_circulo = (-47.9292, -15.7801)
+# raio_km = 10
+# 
+# populacao_estimada = calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade)
+# print(f"População estimada no círculo: {populacao_estimada:.0f}")
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
