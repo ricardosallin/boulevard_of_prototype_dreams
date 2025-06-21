@@ -82,6 +82,30 @@
 
         // Função para adicionar um marcador e círculo ao clicar no mapa
         function onMapClick(e) {
+            // Verifica se a tecla Ctrl está pressionada para decidir se vai remover o círculo
+            if (e.originalEvent.ctrlKey) {
+                // Remover o círculo mais próximo da posição clicada
+                let nearestCircleData = null;
+                let minDistance = Infinity;
+
+                circles.forEach(function(circleData) {
+                    let distance = map.distance(e.latlng, circleData.circle.getLatLng());
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        nearestCircleData = circleData;
+                    }
+                });
+
+                if (nearestCircleData && minDistance < radius) {  // Limite de distância
+                    map.removeLayer(nearestCircleData.circle);
+                    map.removeLayer(nearestCircleData.marker);
+                    circles = circles.filter(c => c.circle !== nearestCircleData.circle);
+                }
+
+                return;  // Sai da função se for um clique com Ctrl (remoção)
+            }
+
+            // Criar um marcador e círculo se não for uma remoção
             var marker = L.marker(e.latlng).addTo(map);
 
             // Criar um círculo ao redor do marcador com o raio dinâmico
@@ -119,14 +143,6 @@
                         sendCircleData(finalLatLng.lat, finalLatLng.lng, circle.getRadius());  // Envia os novos dados
                     });
                 }
-            });
-
-            // Apagar o círculo e o marcador ao clicar com o botão direito
-            circle.on('contextmenu', function(e) {
-                e.preventDefault();  // Previne o comportamento padrão do contexto
-                map.removeLayer(circle);  // Remove o círculo do mapa
-                map.removeLayer(marker);  // Remove o marcador do mapa
-                circles = circles.filter(c => c.circle !== circle);  // Remove da lista de círculos
             });
 
             // Enviar os dados para o backend
