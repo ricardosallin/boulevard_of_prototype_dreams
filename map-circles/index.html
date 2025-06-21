@@ -39,13 +39,19 @@
         }).addTo(map);
 
         var radius = 100000;  // Valor inicial em metros (100 km)
+        var circles = [];  // Lista para armazenar os círculos existentes
 
-        // Atualiza o valor do raio ao mover o slider
+        // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
         var radiusInput = document.getElementById('radiusInput');
         var radiusValue = document.getElementById('radiusValue');
         radiusInput.oninput = function() {
             radiusValue.innerHTML = this.value;
             radius = this.value * 1000;  // Converter para metros
+            
+            // Atualizar o raio de todos os círculos existentes
+            circles.forEach(function(circle) {
+                circle.setRadius(radius);
+            });
         };
 
         // Função para enviar os dados para o backend
@@ -82,6 +88,9 @@
                 fillOpacity: 0.5,
                 radius: radius  // Raio ajustável
             }).addTo(map);
+
+            // Armazenar o círculo na lista
+            circles.push(circle);
 
             // Enviar os dados para o backend
             sendCircleData(e.latlng.lat, e.latlng.lng, radius);
