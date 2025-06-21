@@ -52,8 +52,8 @@
             radius = this.value * 1000;  // Converter para metros
             
             // Atualizar o raio de todos os círculos existentes
-            circles.forEach(function(circle) {
-                circle.setRadius(radius);
+            circles.forEach(function(circleData) {
+                circleData.circle.setRadius(radius);
             });
         };
 
@@ -93,25 +93,37 @@
                 editable: true  // Torna o círculo editável
             }).addTo(map);
 
-            // Habilitar edição ao clicar no círculo
+            // Armazenar o círculo e o marcador como um par
+            circles.push({
+                marker: marker,
+                circle: circle
+            });
+
+            // Habilitar a movimentação do círculo
             circle.on('click', function() {
                 circle.enableEdit();  // Permite mover o círculo
 
-                // Atualiza o círculo quando ele for movido
+                // Desabilitar o movimento do mapa ao arrastar o círculo
+                map.dragging.disable();
+
+                // Atualizar o círculo quando ele for movido
                 circle.on('editable:dragend', function() {
                     var newLatLng = circle.getLatLng();
+                    marker.setLatLng(newLatLng);  // Sincronizar o marcador com o círculo
+
                     sendCircleData(newLatLng.lat, newLatLng.lng, circle.getRadius());
+
+                    // Habilitar o movimento do mapa novamente após o drag
+                    map.dragging.enable();
                 });
             });
 
-            // Apagar o círculo ao clicar com o botão direito
+            // Apagar o círculo e o marcador ao clicar com o botão direito
             circle.on('contextmenu', function() {
                 map.removeLayer(circle);  // Remove o círculo do mapa
-                circles = circles.filter(c => c !== circle);  // Remove da lista de círculos
+                map.removeLayer(marker);  // Remove o marcador do mapa
+                circles = circles.filter(c => c.circle !== circle);  // Remove da lista de círculos
             });
-
-            // Armazenar o círculo na lista
-            circles.push(circle);
 
             // Enviar os dados para o backend
             sendCircleData(e.latlng.lat, e.latlng.lng, radius);
