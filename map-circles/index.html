@@ -3,205 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interativo</title>
+    <title>Simulador de População</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet-editable@1.2.0/dist/Leaflet.Editable.min.js"></script>
     <style>
         #map {
             height: 90vh;
             width: 100%;
         }
-        #controls {
-            height: 10vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        #populacao-display {
+            padding: 10px;
             background-color: #f0f0f0;
-        }
-        #radiusInput {
-            width: 300px;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
-    <div id="populacao-display">População: 0</div>
-    <div id="controls">
-        <label for="radiusInput">Raio (km): </label>
-        <input type="range" id="radiusInput" min="1" max="500" value="100">
-        <span id="radiusValue">100</span> km
-    </div>
+    <div id="populacao-display">População estimada: 0</div>
 
     <script>
-        var map = L.map('map', {
-            editable: true  // Habilita edição no mapa
-        }).setView([0, 0], 2);
+        var map = L.map('map').setView([0, 0], 2);  // Ponto inicial no centro do mundo
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
 
-        var radius = 100000;  // Valor inicial em metros (100 km)
-        var circles = [];  // Lista para armazenar os círculos existentes
+        var radius = 10000;  // Raio inicial em metros
+        var circles = [];  // Lista para armazenar os círculos criados
 
-        // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
-        var radiusInput = document.getElementById('radiusInput');
-        var radiusValue = document.getElementById('radiusValue');
-        radiusInput.oninput = function() {
-            radiusValue.innerHTML = this.value;
-            radius = this.value * 1000;  // Converter para metros
-            
-            // Atualizar o raio de todos os círculos existentes
-            circles.forEach(function(circleData) {
-                circleData.circle.setRadius(radius);
-            });
-        };
-
-        // Função para enviar os dados para o backend
-        function sendCircleData(lat, lng, radius) {
+        // Função para atualizar a população ao criar ou mover um círculo
+        function atualizarPopulacao(centro, raio) {
             fetch('/process_circle', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    lat: lat,
-                    lng: lng,
-                    radius: radius
-                }),
+                    centro: centro,  // [lon, lat]
+                    raio: raio       // Raio em km
+                })
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Sucesso:', data);
-                alert('População estimada: ' + data.estimated_population);
+                const populacao = data.estimated_population;
+                document.getElementById('populacao-display').innerText = `População estimada: ${populacao}`;
             })
-            .catch((error) => {
-                console.error('Erro:', error);
-            });
+            .catch(error => console.error('Erro:', error));
         }
 
-        // Função para adicionar um marcador e círculo ao clicar no mapa
+        // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
-            // Verifica se a tecla Ctrl está pressionada para decidir se vai remover o círculo
-            if (e.originalEvent.ctrlKey) {
-                // Remover o círculo mais próximo da posição clicada
-                let nearestCircleData = null;
-                let minDistance = Infinity;
-        
-                // Encontra o círculo mais próximo do clique
-                circles.forEach(function(circleData) {
-                    let distance = map.distance(e.latlng, circleData.circle.getLatLng());
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        nearestCircleData = circleData;
-                    }
-                });
-        
-                if (nearestCircleData && minDistance < radius) {  // Limite de distância
-                    map.removeLayer(nearestCircleData.circle);  // Remove o círculo
-                    map.removeLayer(nearestCircleData.marker);  // Remove o marcador
-                    circles = circles.filter(c => c.circle !== nearestCircleData.circle);  // Remove da lista de círculos
-                }
-        
-                // Impedir a criação de um novo círculo quando o Ctrl é pressionado
-                return;  
-            }
-        
-            // Criar um novo marcador e círculo se Ctrl não estiver pressionado
             var marker = L.marker(e.latlng).addTo(map);
-        
-            // Criar o círculo ao redor do marcador com o raio dinâmico
+
             var circle = L.circle(e.latlng, {
                 color: 'blue',
                 fillColor: '#30f',
                 fillOpacity: 0.5,
-                radius: radius,  // Raio ajustável
-                editable: true  // Torna o círculo editável
+                radius: radius  // Raio ajustável
             }).addTo(map);
-        
-            // Armazenar o círculo e o marcador como um par
-            circles.push({
-                marker: marker,
-                circle: circle
-            });
-        
-            // Função para calcular a população quando o círculo for criado
-            atualizarPopulacao([e.latlng.lng, e.latlng.lat], radius / 1000);
-        }
-        
-        // Escuta o evento de clique no mapa
-        map.on('click', onMapClick);
 
-            // Função para enviar dados do círculo ao backend e obter a população estimada
-            function atualizarPopulacao(centro, raio) {
-                fetch('/process_circle', {  // Corrigir a rota aqui
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        centro: centro,  // [lon, lat]
-                        raio: raio       // em km
-                    })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    const populacao = data.estimated_population;
-                    console.log(`População estimada no círculo: ${populacao}`);
-                    // Exibir a população no frontend (substitua com seu próprio código)
-                    document.getElementById('populacao-display').innerText = `População: ${populacao}`;
-                })
-                .catch(error => console.error('Erro:', error));
-            }
+            // Armazenar o círculo e o marcador
+            circles.push({ marker: marker, circle: circle });
 
-            
-            // Chamar a função ao adicionar ou mover um círculo
-            circle.on('dragend', function() {
-                const centro = [circle.getLatLng().lng, circle.getLatLng().lat];
-                const raio = circle.getRadius() / 1000;  // Converter metros para km
-                atualizarPopulacao(centro, raio);
-            });
-            
-            // Chamar a função ao adicionar um novo círculo
-            map.on('click', function(e) {
-                const novoCirculo = L.circle(e.latlng, { radius: 10000 }).addTo(map);  // Exemplo: 10 km de raio
-                atualizarPopulacao([e.latlng.lng, e.latlng.lat], 10);  // 10 km de raio
-            });
+            // Calcular a população ao adicionar o círculo
+            atualizarPopulacao([e.latlng.lng, e.latlng.lat], radius / 1000);  // Converter metros para km
 
-            
-            // Função para mover o círculo com o botão direito
+            // Adicionar movimentação para recalcular a população ao mover o círculo
             circle.on('mousedown', function(e) {
                 if (e.originalEvent.button === 2) {  // Botão direito
-                    e.originalEvent.preventDefault();  // Previne o contexto do menu de remoção
-                    map.dragging.disable();  // Desabilita o movimento do mapa
-            
+                    e.originalEvent.preventDefault();
+                    map.dragging.disable();
+                    
                     map.on('mousemove', function(ev) {
-                        var newLatLng = ev.latlng;
-                        circle.setLatLng(newLatLng);
-                        marker.setLatLng(newLatLng);
+                        circle.setLatLng(ev.latlng);
+                        marker.setLatLng(ev.latlng);
                     });
-            
+
                     map.on('mouseup', function() {
-                        map.dragging.enable();  // Reabilita o movimento do mapa
-                        map.off('mousemove');  // Desabilita o evento de movimentação
-                        map.off('mouseup');  // Remove o evento de mouseup
-            
-                        // Atualizar a população após o movimento
-                        var finalLatLng = circle.getLatLng();
-                        atualizarPopulacao([finalLatLng.lng, finalLatLng.lat], circle.getRadius() / 1000);
+                        map.dragging.enable();
+                        map.off('mousemove');
+                        map.off('mouseup');
+
+                        var newLatLng = circle.getLatLng();
+                        atualizarPopulacao([newLatLng.lng, newLatLng.lat], circle.getRadius() / 1000);
                     });
                 }
             });
-
-            // Enviar os dados para o backend
-            sendCircleData(e.latlng.lat, e.latlng.lng, radius);
-
-            console.log("Coordenadas: " + e.latlng);
         }
 
-        // Escuta o evento de clique no mapa
+        // Remover círculo ao pressionar Ctrl + clique
+        function removerCirculo(e) {
+            if (e.originalEvent.ctrlKey) {
+                let nearestCircle = null;
+                let minDistance = Infinity;
+
+                circles.forEach(function(circleData) {
+                    let distance = map.distance(e.latlng, circleData.circle.getLatLng());
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        nearestCircle = circleData;
+                    }
+                });
+
+                if (nearestCircle && minDistance < radius) {
+                    map.removeLayer(nearestCircle.circle);
+                    map.removeLayer(nearestCircle.marker);
+                    circles = circles.filter(c => c.circle !== nearestCircle.circle);
+                }
+            }
+        }
+
+        // Adicionar eventos de clique no mapa
         map.on('click', onMapClick);
+        map.on('click', removerCirculo);
     </script>
 </body>
 </html>
