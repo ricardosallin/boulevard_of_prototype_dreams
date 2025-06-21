@@ -99,23 +99,25 @@
                 circle: circle
             });
 
-            // Habilitar a movimentação do círculo
-            circle.on('click', function() {
-                circle.enableEdit();  // Permite mover o círculo
+            // Função para mover o círculo com o botão direito
+            circle.on('mousedown', function(e) {
+                if (e.originalEvent.button === 2) {  // Botão direito
+                    map.dragging.disable();  // Desabilita o movimento do mapa
+                    map.on('mousemove', function(ev) {
+                        var newLatLng = ev.latlng;
+                        circle.setLatLng(newLatLng);
+                        marker.setLatLng(newLatLng);
+                    });
 
-                // Desabilitar o movimento do mapa ao arrastar o círculo
-                map.dragging.disable();
+                    map.on('mouseup', function() {
+                        map.dragging.enable();  // Reabilita o movimento do mapa
+                        map.off('mousemove');  // Desabilita o evento de movimentação
+                        map.off('mouseup');  // Remove o evento de mouseup
 
-                // Atualizar o círculo quando ele for movido
-                circle.on('editable:dragend', function() {
-                    var newLatLng = circle.getLatLng();
-                    marker.setLatLng(newLatLng);  // Sincronizar o marcador com o círculo
-
-                    sendCircleData(newLatLng.lat, newLatLng.lng, circle.getRadius());
-
-                    // Habilitar o movimento do mapa novamente após o drag
-                    map.dragging.enable();
-                });
+                        var finalLatLng = circle.getLatLng();
+                        sendCircleData(finalLatLng.lat, finalLatLng.lng, circle.getRadius());  // Envia os novos dados
+                    });
+                }
             });
 
             // Apagar o círculo e o marcador ao clicar com o botão direito
