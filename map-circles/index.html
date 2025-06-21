@@ -15,32 +15,59 @@
 <body>
     <div id="map"></div>
 
-    <script>
-        var map = L.map('map').setView([0, 0], 2);
-    
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
+<script>
+    var map = L.map('map').setView([0, 0], 2);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Função para enviar os dados para o backend
+    function sendCircleData(lat, lng, radius) {
+        fetch('/process_circle', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                lat: lat,
+                lng: lng,
+                radius: radius
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Sucesso:', data);
+        })
+        .catch((error) => {
+            console.error('Erro:', error);
+        });
+    }
+
+    // Função para adicionar um marcador e círculo ao clicar no mapa
+    function onMapClick(e) {
+        var marker = L.marker(e.latlng).addTo(map);
+
+        // Criar um círculo ao redor do marcador com raio de 100km (100000 metros)
+        var radius = 100000;
+        var circle = L.circle(e.latlng, {
+            color: 'blue',
+            fillColor: '#30f',
+            fillOpacity: 0.5,
+            radius: radius  // Raio de 100 km
         }).addTo(map);
-    
-        // Função para adicionar um marcador e círculo ao clicar no mapa
-        function onMapClick(e) {
-            var marker = L.marker(e.latlng).addTo(map);
-    
-            // Criar um círculo ao redor do marcador com raio de 100km (100000 metros)
-            var circle = L.circle(e.latlng, {
-                color: 'blue',
-                fillColor: '#30f',
-                fillOpacity: 0.5,
-                radius: 100000  // Raio de 100 km
-            }).addTo(map);
-    
-            // Exibe as coordenadas do ponto no console
-            console.log("Coordenadas: " + e.latlng);
-        }
-    
-        // Escuta o evento de clique no mapa
-        map.on('click', onMapClick);
-    </script>
+
+        // Enviar os dados para o backend
+        sendCircleData(e.latlng.lat, e.latlng.lng, radius);
+
+        // Exibe as coordenadas do ponto no console
+        console.log("Coordenadas: " + e.latlng);
+    }
+
+    // Escuta o evento de clique no mapa
+    map.on('click', onMapClick);
+</script>
+
 
 </body>
 </html>
