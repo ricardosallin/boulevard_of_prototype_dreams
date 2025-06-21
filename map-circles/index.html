@@ -79,18 +79,17 @@
             .catch(error => console.error('Erro ao calcular população:', error));
         }
 
-
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
             var marker = L.marker(e.latlng).addTo(map);
-
+        
             var circle = L.circle(e.latlng, {
                 color: 'blue',
                 fillColor: '#30f',
                 fillOpacity: 0.5,
                 radius: radius  // Raio ajustável
             }).addTo(map);
-
+        
             // Criar um tooltip para exibir a população acima do círculo
             var tooltip = L.tooltip({
                 permanent: true,
@@ -99,13 +98,18 @@
             .setLatLng(e.latlng)
             .setContent('População: 0')
             .addTo(map);
-
+        
             // Armazenar o círculo, o marcador e o tooltip
             circles.push({ marker: marker, circle: circle, tooltip: tooltip });
-
+        
             // Calcular a população ao adicionar o círculo
             atualizarPopulacao([e.latlng.lng, e.latlng.lat], radius / 1000, tooltip);  // Converter metros para km
-
+        
+            // Prevenir o menu de contexto ao usar o botão direito
+            circle.on('contextmenu', function(e) {
+                e.preventDefault();
+            });
+        
             // Adicionar movimentação para recalcular a população ao mover o círculo
             circle.on('mousedown', function(e) {
                 if (e.originalEvent.button === 2) {  // Botão direito
@@ -117,12 +121,12 @@
                         marker.setLatLng(ev.latlng);
                         tooltip.setLatLng(ev.latlng);  // Atualizar a posição do tooltip
                     });
-
+        
                     map.on('mouseup', function() {
                         map.dragging.enable();
                         map.off('mousemove');
                         map.off('mouseup');
-
+        
                         var newLatLng = circle.getLatLng();
                         atualizarPopulacao([newLatLng.lng, newLatLng.lat], circle.getRadius() / 1000, tooltip);
                     });
