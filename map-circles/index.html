@@ -56,7 +56,7 @@
             });
         };
 
-        // Função para atualizar a população ao criar ou mover um círculo
+        // Função para atualizar a população ao criar, mover ou ajustar o círculo
         function atualizarPopulacao(centro, raio, tooltip) {
             fetch('/process_circle', {
                 method: 'POST',
@@ -71,11 +71,14 @@
             .then(response => response.json())
             .then(data => {
                 const populacao = data.estimated_population;
-                tooltip.setContent(`População: ${populacao}`);
+                // Formatar o número com separador de milhares
+                const populacaoFormatada = populacao.toLocaleString('pt-BR');
+                tooltip.setContent(`População: ${populacaoFormatada}`);
                 tooltip.update();
             })
             .catch(error => console.error('Erro ao calcular população:', error));
         }
+
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
