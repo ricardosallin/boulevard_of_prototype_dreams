@@ -38,6 +38,7 @@
         .then(response => response.json())
         .then(data => {
             console.log('Sucesso:', data);
+            alert('População estimada: ' + data.estimated_population);
         })
         .catch((error) => {
             console.error('Erro:', error);
@@ -54,17 +55,15 @@
             color: 'blue',
             fillColor: '#30f',
             fillOpacity: 0.5,
-            radius: radius  // Raio de 100 km
+            radius: radius
         }).addTo(map);
 
         // Enviar os dados para o backend
         sendCircleData(e.latlng.lat, e.latlng.lng, radius);
 
-        // Exibe as coordenadas do ponto no console
         console.log("Coordenadas: " + e.latlng);
     }
 
-    // Escuta o evento de clique no mapa
     map.on('click', onMapClick);
 </script>
 
