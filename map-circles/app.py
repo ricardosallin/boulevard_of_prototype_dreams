@@ -33,36 +33,38 @@ import rasterio
 import numpy as np
 
 # Carregue o arquivo .tif
-file_path = 'caminho_para_o_arquivo.tif'
+file_path = 'caminho_para_o_arquivo.tif'  # Substitua pelo caminho correto
 
 # Abrir o arquivo .tif usando rasterio
 with rasterio.open(file_path) as dataset:
     # Obter os dados de densidade populacional
-    densidade = dataset.read(1)  # Lê a primeira banda (a densidade populacional)
+    densidade = dataset.read(1)  # Lê a primeira banda (densidade populacional)
     
     # Obter as coordenadas de cada pixel
     transform = dataset.transform
     
     # Verificar informações básicas
-    print("Dimensões:", densidade.shape)
-    print("Transform:", transform)
-    print("Primeiros valores de densidade:", densidade[0:5, 0:5])
+    print("Dimensões da imagem (linha, coluna):", densidade.shape)
+    print("Transformação de coordenadas:", transform)
+    print("Primeiros valores de densidade populacional:", densidade[0:5, 0:5])
+
 
 
 from rasterio.transform import rowcol
-from shapely.geometry import Point
 
-# Converter coordenadas geográficas para índice no raster
+# Função para converter coordenadas geográficas para índice no raster
 def coordenadas_para_indice(lon, lat, transform):
-    # Usar a transformação do dataset para converter para índice de linha/coluna
     col, row = ~transform * (lon, lat)
     return int(row), int(col)
 
-# # Exemplo de uso com coordenadas de um ponto
-# lon, lat = -47.9292, -15.7801  # Exemplo: Brasília
+# # Exemplo de uso: coordenadas de Brasília
+# lon, lat = -47.9292, -15.7801  # Brasília
+
+# # Converter coordenadas para índice no raster
 # linha, coluna = coordenadas_para_indice(lon, lat, transform)
-# print("Índice no raster:", linha, coluna)
-# print("Densidade populacional nesse ponto:", densidade[linha, coluna])
+# print(f"Índice no raster para Brasília: ({linha}, {coluna})")
+# print(f"Densidade populacional em Brasília: {densidade[linha, coluna]}")
+
 
 
 if __name__ == '__main__':
