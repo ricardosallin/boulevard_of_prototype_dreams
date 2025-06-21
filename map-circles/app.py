@@ -45,9 +45,14 @@ def calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade)
         for col in range(coluna_min, coluna_max + 1):
             lon, lat = transform * (col, row)
             if ponto_dentro_do_circulo(lon, lat, centro_circulo, raio_km / 111):
-                populacao_total += densidade[row, col]
+                valor_densidade = densidade[row, col]
+
+                # Ignorar células sem dados ou com valores inválidos
+                if valor_densidade > 0:  # Considerar apenas valores positivos
+                    populacao_total += valor_densidade
 
     return populacao_total
+
 
 # Rota principal para servir o arquivo HTML
 @app.route('/')
