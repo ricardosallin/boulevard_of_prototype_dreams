@@ -67,5 +67,17 @@ def coordenadas_para_indice(lon, lat, transform):
 
 
 
+from shapely.geometry import Point
+
+# Função para verificar se um ponto está dentro de um círculo
+def ponto_dentro_do_circulo(lon, lat, centro_circulo, raio):
+    # Criar um ponto a partir das coordenadas (lon, lat)
+    ponto = Point(lon, lat)
+    # Criar um círculo a partir do centro e do raio
+    circulo = Point(centro_circulo).buffer(raio)
+    # Verificar se o ponto está dentro do círculo
+    return ponto.within(circulo)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
