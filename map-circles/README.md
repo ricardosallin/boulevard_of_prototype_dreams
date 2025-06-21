@@ -55,6 +55,8 @@ Visualização gerada:
 - folium
 - numpy
 - flask
+- geopandas
+- shapely
 
 Instale com:
 
