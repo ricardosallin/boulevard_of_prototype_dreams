@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interativo</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-editable@1.2.0/dist/Leaflet.Editable.min.js"></script>
     <style>
         #map {
             height: 90vh;
@@ -30,9 +32,10 @@
         <span id="radiusValue">100</span> km
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([0, 0], 2);
+        var map = L.map('map', {
+            editable: true  // Habilita edição no mapa
+        }).setView([0, 0], 2);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
@@ -86,8 +89,26 @@
                 color: 'blue',
                 fillColor: '#30f',
                 fillOpacity: 0.5,
-                radius: radius  // Raio ajustável
+                radius: radius,  // Raio ajustável
+                editable: true  // Torna o círculo editável
             }).addTo(map);
+
+            // Habilitar edição ao clicar no círculo
+            circle.on('click', function() {
+                circle.enableEdit();  // Permite mover o círculo
+
+                // Atualiza o círculo quando ele for movido
+                circle.on('editable:dragend', function() {
+                    var newLatLng = circle.getLatLng();
+                    sendCircleData(newLatLng.lat, newLatLng.lng, circle.getRadius());
+                });
+            });
+
+            // Apagar o círculo ao clicar com o botão direito
+            circle.on('contextmenu', function() {
+                map.removeLayer(circle);  // Remove o círculo do mapa
+                circles = circles.filter(c => c !== circle);  // Remove da lista de círculos
+            });
 
             // Armazenar o círculo na lista
             circles.push(circle);
