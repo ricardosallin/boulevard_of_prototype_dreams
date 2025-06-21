@@ -111,12 +111,36 @@ def calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade)
     
     return populacao_total
 
-# # Exemplo de círculo com centro em Brasília (-47.9292, -15.7801) e raio de 10 km
+def calcular_populacao_no_circulo_rapido(centro_circulo, raio_km, transform, densidade):
+    # Calcular a Bounding Box para o círculo
+    lon_min, lon_max, lat_min, lat_max = calcular_bounding_box(centro_circulo, raio_km)
+    
+    # Converter as coordenadas da Bounding Box para índices no raster
+    linha_min, coluna_min = coordenadas_para_indice(lon_min, lat_min, transform)
+    linha_max, coluna_max = coordenadas_para_indice(lon_max, lat_max, transform)
+    
+    populacao_total = 0
+
+    # Iterar apenas sobre as células dentro da Bounding Box
+    for row in range(linha_min, linha_max):
+        for col in range(coluna_min, coluna_max):
+            # Converter índice de volta para coordenadas geográficas
+            lon, lat = transform * (col, row)
+            
+            # Verificar se o ponto está dentro do círculo
+            if ponto_dentro_do_circulo(lon, lat, centro_circulo, raio_km / 111):
+                # Adicionar a densidade da célula à população total
+                populacao_total += densidade[row, col]
+    
+    return populacao_total
+
+# # Exemplo de círculo em Brasília (-47.9292, -15.7801) com raio de 10 km
 # centro_circulo = (-47.9292, -15.7801)
 # raio_km = 10
 # 
-# populacao_estimada = calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade)
+# populacao_estimada = calcular_populacao_no_circulo_rapido(centro_circulo, raio_km, transform, densidade)
 # print(f"População estimada no círculo: {populacao_estimada:.0f}")
+
 
 
 
