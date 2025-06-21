@@ -26,6 +26,7 @@
 </head>
 <body>
     <div id="map"></div>
+    <div id="populacao-display">População: 0</div>
     <div id="controls">
         <label for="radiusInput">Raio (km): </label>
         <input type="range" id="radiusInput" min="1" max="500" value="100">
@@ -87,7 +88,7 @@
                 // Remover o círculo mais próximo da posição clicada
                 let nearestCircleData = null;
                 let minDistance = Infinity;
-
+        
                 circles.forEach(function(circleData) {
                     let distance = map.distance(e.latlng, circleData.circle.getLatLng());
                     if (distance < minDistance) {
@@ -95,14 +96,14 @@
                         nearestCircleData = circleData;
                     }
                 });
-
+        
                 if (nearestCircleData && minDistance < radius) {  // Limite de distância
                     map.removeLayer(nearestCircleData.circle);
                     map.removeLayer(nearestCircleData.marker);
                     circles = circles.filter(c => c.circle !== nearestCircleData.circle);
                 }
-
-                return;  // Sai da função se for um clique com Ctrl (remoção)
+        
+                return;  // Impede a criação de um novo círculo ao remover
             }
 
             // Criar um marcador e círculo se não for uma remoção
@@ -125,7 +126,7 @@
 
             // Função para enviar dados do círculo ao backend e obter a população estimada
             function atualizarPopulacao(centro, raio) {
-                fetch('/calcular_populacao', {
+                fetch('/process_circle', {  // Corrigir a rota aqui
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -137,13 +138,14 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    const populacao = data.populacao;
+                    const populacao = data.estimated_population;
                     console.log(`População estimada no círculo: ${populacao}`);
                     // Exibir a população no frontend (substitua com seu próprio código)
                     document.getElementById('populacao-display').innerText = `População: ${populacao}`;
                 })
                 .catch(error => console.error('Erro:', error));
             }
+
             
             // Chamar a função ao adicionar ou mover um círculo
             circle.on('dragend', function() {
