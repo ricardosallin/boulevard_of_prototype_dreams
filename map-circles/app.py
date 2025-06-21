@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, render_template, request, jsonify
 import rasterio
 
 app = Flask(__name__)
@@ -48,6 +48,11 @@ def calcular_populacao_no_circulo(centro_circulo, raio_km, transform, densidade)
                 populacao_total += densidade[row, col]
 
     return populacao_total
+
+# Rota principal para servir o arquivo HTML
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 # Rota para calcular a população
 @app.route('/process_circle', methods=['POST'])
