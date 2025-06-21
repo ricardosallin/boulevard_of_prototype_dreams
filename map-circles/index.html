@@ -138,6 +138,11 @@
                         map.dragging.enable();  // Reabilita o movimento do mapa
                         map.off('mousemove');  // Desabilita o evento de movimentação
                         map.off('mouseup');  // Remove o evento de mouseup
+                        
+                        // Previne o menu de contexto ao soltar o botão direito
+                        map.once('contextmenu', function(e) {
+                            e.preventDefault();
+                        });
 
                         var finalLatLng = circle.getLatLng();
                         sendCircleData(finalLatLng.lat, finalLatLng.lng, circle.getRadius());  // Envia os novos dados
