@@ -8,7 +8,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
         #map {
-            height: 85vh;
+            height: 90vh;
             width: 100%;
         }
         #controls {
@@ -39,7 +39,7 @@
     <div id="totalPopulacao">População total: 0</div>
 
     <script>
-        var map = L.map('map').setView([0, 0], 2);
+        var map = L.map('map').setView([-16, -48], 4);  // Ponto inicial no centro do mundo
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
@@ -51,15 +51,17 @@
         // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
         var radiusInput = document.getElementById('radiusInput');
         var radiusValue = document.getElementById('radiusValue');
-        // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
         radiusInput.oninput = function() {
             radiusValue.innerHTML = this.value;
             radius = this.value * 1000;  // Converter para metros
             
+            // Atualizar o raio de todos os círculos existentes
             circles.forEach(function(circleData) {
                 circleData.circle.setRadius(radius);
+
+                // Recalcular a população com o novo raio
                 var centro = circleData.circle.getLatLng();
-                atualizarPopulacao([centro.lng, centro.lat], radius / 1000, circleData.tooltip, true);  // Atualiza a população e o total
+                atualizarPopulacao([centro.lng, centro.lat], radius / 1000, circleData.tooltip, true);
             });
         };
 
@@ -67,25 +69,25 @@
         function getCorPorPopulacao(populacao, minPop, maxPop) {
             // Evitar divisão por zero
             if (maxPop === minPop) return '#ff0000';  // Caso todos os valores sejam iguais, usa vermelho
-        
+
             // Calcular a intensidade da cor com base na população
             const intensidade = (populacao - minPop) / (maxPop - minPop);
             const r = Math.round(255 * intensidade);  // Canal vermelho aumenta com a população
             const b = Math.round(255 * (1 - intensidade));  // Canal azul diminui com a população
             return `rgb(${r}, 0, ${b})`;
         }
-        
+
         // Função para atualizar as cores dos círculos com base na população
         function atualizarCoresCirculos() {
             // Encontrar as populações mínima e máxima entre todos os círculos
             let minPop = Infinity, maxPop = -Infinity;
-        
+
             circles.forEach(function(circleData) {
                 const populacao = circleData.tooltip._population || 0;
                 if (populacao < minPop) minPop = populacao;
                 if (populacao > maxPop) maxPop = populacao;
             });
-        
+
             // Aplicar cor a cada círculo com base na população
             circles.forEach(function(circleData) {
                 const populacao = circleData.tooltip._population || 0;
@@ -93,20 +95,8 @@
                 circleData.circle.setStyle({ color: cor, fillColor: cor });
             });
         }
-        
-        // Atualizar o total de população e as cores dos círculos
-        function atualizarPopulacaoTotal() {
-            let totalPopulacao = 0;
-            circles.forEach(function(circleData) {
-                totalPopulacao += circleData.tooltip._population || 0;
-            });
-            document.getElementById('totalPopulacao').innerText = `População total: ${totalPopulacao.toLocaleString('pt-BR')}`;
-        
-            // Atualizar a cor dos círculos com base na população
-            atualizarCoresCirculos();
-        }
-        
-        // Chamar atualizarCoresCirculos sempre que a população é atualizada
+
+        // Função para atualizar a população ao criar ou mover um círculo
         function atualizarPopulacao(centro, raio, tooltip, isUpdateTotal = false) {
             fetch('/process_circle', {
                 method: 'POST',
@@ -121,11 +111,15 @@
             .then(response => response.json())
             .then(data => {
                 const populacao = data.estimated_population;
-                tooltip.setContent(`População: ${populacao.toLocaleString('pt-BR')}`);
+                // Formatar o número com separador de milhares
+                const populacaoFormatada = populacao.toLocaleString('pt-BR');
+                tooltip.setContent(`População: ${populacaoFormatada}`);
                 tooltip.update();
-                
+
+                // Atualizar o valor da população no objeto
                 tooltip._population = populacao;
                 
+                // Se necessário, atualizar o total de população
                 if (isUpdateTotal) {
                     atualizarPopulacaoTotal();
                 }
@@ -133,9 +127,26 @@
             .catch(error => console.error('Erro ao calcular população:', error));
         }
 
+        // Função para calcular e exibir a população total de todos os círculos
+        function atualizarPopulacaoTotal() {
+            let totalPopulacao = 0;
+            circles.forEach(function(circleData) {
+                totalPopulacao += circleData.tooltip._population || 0;
+            });
+            document.getElementById('totalPopulacao').innerText = `População total: ${totalPopulacao.toLocaleString('pt-BR')}`;
+
+            // Atualizar a cor dos círculos com base na população
+            atualizarCoresCirculos();
+        }
 
         // Função para adicionar círculo ao clicar no mapa
         function onMapClick(e) {
+            // Verifica se a tecla Ctrl está pressionada para decidir se vai remover o círculo
+            if (e.originalEvent.ctrlKey) {
+                removerCirculo(e.latlng);  // Chama a função de remoção
+                return;  // Não criar novo círculo se estiver removendo
+            }
+
             var marker = L.marker(e.latlng).addTo(map);
 
             var circle = L.circle(e.latlng, {
@@ -160,6 +171,11 @@
             // Calcular a população ao adicionar o círculo e atualizar o total
             atualizarPopulacao([e.latlng.lng, e.latlng.lat], radius / 1000, tooltip, true);  // Converter metros para km
 
+            // Prevenir o menu de contexto ao usar o botão direito
+            circle.on('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
             // Adicionar movimentação para recalcular a população ao mover o círculo
             circle.on('mousedown', function(e) {
                 if (e.originalEvent.button === 2) {  // Botão direito
@@ -169,7 +185,7 @@
                     map.on('mousemove', function(ev) {
                         circle.setLatLng(ev.latlng);
                         marker.setLatLng(ev.latlng);
-                        tooltip.setLatLng(ev.latlng);
+                        tooltip.setLatLng(ev.latlng);  // Atualizar a posição do tooltip
                     });
 
                     map.on('mouseup', function() {
@@ -181,6 +197,8 @@
                         atualizarPopulacao([newLatLng.lng, newLatLng.lat], circle.getRadius() / 1000, tooltip, true);
                     });
                 }
+                // Atualizar o total de população após remoção
+                atualizarPopulacaoTotal();            
             });
         }
 
@@ -189,6 +207,7 @@
             let nearestCircle = null;
             let minDistance = Infinity;
 
+            // Encontrar o círculo mais próximo
             circles.forEach(function(circleData) {
                 let distance = map.distance(latlng, circleData.circle.getLatLng());
                 if (distance < minDistance) {
@@ -197,10 +216,11 @@
                 }
             });
 
+            // Se houver um círculo próximo, removê-lo
             if (nearestCircle && minDistance < radius) {
                 map.removeLayer(nearestCircle.circle);
                 map.removeLayer(nearestCircle.marker);
-                map.removeLayer(nearestCircle.tooltip);
+                map.removeLayer(nearestCircle.tooltip);  // Remover o tooltip
                 circles = circles.filter(c => c.circle !== nearestCircle.circle);
 
                 // Atualizar o total de população após remoção
