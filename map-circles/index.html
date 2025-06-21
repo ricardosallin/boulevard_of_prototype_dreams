@@ -89,6 +89,7 @@
                 let nearestCircleData = null;
                 let minDistance = Infinity;
         
+                // Encontra o círculo mais próximo do clique
                 circles.forEach(function(circleData) {
                     let distance = map.distance(e.latlng, circleData.circle.getLatLng());
                     if (distance < minDistance) {
@@ -98,18 +99,19 @@
                 });
         
                 if (nearestCircleData && minDistance < radius) {  // Limite de distância
-                    map.removeLayer(nearestCircleData.circle);
-                    map.removeLayer(nearestCircleData.marker);
-                    circles = circles.filter(c => c.circle !== nearestCircleData.circle);
+                    map.removeLayer(nearestCircleData.circle);  // Remove o círculo
+                    map.removeLayer(nearestCircleData.marker);  // Remove o marcador
+                    circles = circles.filter(c => c.circle !== nearestCircleData.circle);  // Remove da lista de círculos
                 }
         
-                return;  // Impede a criação de um novo círculo ao remover
+                // Impedir a criação de um novo círculo quando o Ctrl é pressionado
+                return;  
             }
-
-            // Criar um marcador e círculo se não for uma remoção
+        
+            // Criar um novo marcador e círculo se Ctrl não estiver pressionado
             var marker = L.marker(e.latlng).addTo(map);
-
-            // Criar um círculo ao redor do marcador com o raio dinâmico
+        
+            // Criar o círculo ao redor do marcador com o raio dinâmico
             var circle = L.circle(e.latlng, {
                 color: 'blue',
                 fillColor: '#30f',
@@ -117,12 +119,19 @@
                 radius: radius,  // Raio ajustável
                 editable: true  // Torna o círculo editável
             }).addTo(map);
-
+        
             // Armazenar o círculo e o marcador como um par
             circles.push({
                 marker: marker,
                 circle: circle
             });
+        
+            // Função para calcular a população quando o círculo for criado
+            atualizarPopulacao([e.latlng.lng, e.latlng.lat], radius / 1000);
+        }
+        
+        // Escuta o evento de clique no mapa
+        map.on('click', onMapClick);
 
             // Função para enviar dados do círculo ao backend e obter a população estimada
             function atualizarPopulacao(centro, raio) {
@@ -166,24 +175,21 @@
                 if (e.originalEvent.button === 2) {  // Botão direito
                     e.originalEvent.preventDefault();  // Previne o contexto do menu de remoção
                     map.dragging.disable();  // Desabilita o movimento do mapa
+            
                     map.on('mousemove', function(ev) {
                         var newLatLng = ev.latlng;
                         circle.setLatLng(newLatLng);
                         marker.setLatLng(newLatLng);
                     });
-
+            
                     map.on('mouseup', function() {
                         map.dragging.enable();  // Reabilita o movimento do mapa
                         map.off('mousemove');  // Desabilita o evento de movimentação
                         map.off('mouseup');  // Remove o evento de mouseup
-                        
-                        // Previne o menu de contexto ao soltar o botão direito
-                        map.once('contextmenu', function(e) {
-                            e.preventDefault();
-                        });
-
+            
+                        // Atualizar a população após o movimento
                         var finalLatLng = circle.getLatLng();
-                        sendCircleData(finalLatLng.lat, finalLatLng.lng, circle.getRadius());  // Envia os novos dados
+                        atualizarPopulacao([finalLatLng.lng, finalLatLng.lat], circle.getRadius() / 1000);
                     });
                 }
             });
