@@ -51,6 +51,7 @@
         // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
         var radiusInput = document.getElementById('radiusInput');
         var radiusValue = document.getElementById('radiusValue');
+        // Atualiza o valor do raio ao mover o slider e modifica os círculos existentes
         radiusInput.oninput = function() {
             radiusValue.innerHTML = this.value;
             radius = this.value * 1000;  // Converter para metros
@@ -58,7 +59,7 @@
             circles.forEach(function(circleData) {
                 circleData.circle.setRadius(radius);
                 var centro = circleData.circle.getLatLng();
-                atualizarPopulacao([centro.lng, centro.lat], radius / 1000, circleData.tooltip, true);
+                atualizarPopulacao([centro.lng, centro.lat], radius / 1000, circleData.tooltip, true);  // Atualiza a população e o total
             });
         };
 
