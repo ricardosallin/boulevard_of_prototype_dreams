@@ -17,11 +17,21 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script>
-        var map = L.map('map').setView([0, 0], 2);  // Ponto inicial no centro do mundo
+        var map = L.map('map').setView([0, 0], 2);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
+
+        // Função para adicionar um marcador ao clicar no mapa
+        function onMapClick(e) {
+            var marker = L.marker(e.latlng).addTo(map);
+            // Exibe as coordenadas do ponto no console
+            console.log("Coordenadas: " + e.latlng);
+        }
+
+        // Escuta o evento de clique no mapa
+        map.on('click', onMapClick);
     </script>
 </body>
 </html>
