@@ -102,6 +102,7 @@
             // Função para mover o círculo com o botão direito
             circle.on('mousedown', function(e) {
                 if (e.originalEvent.button === 2) {  // Botão direito
+                    e.originalEvent.preventDefault();  // Previne o contexto do menu de remoção
                     map.dragging.disable();  // Desabilita o movimento do mapa
                     map.on('mousemove', function(ev) {
                         var newLatLng = ev.latlng;
@@ -121,7 +122,8 @@
             });
 
             // Apagar o círculo e o marcador ao clicar com o botão direito
-            circle.on('contextmenu', function() {
+            circle.on('contextmenu', function(e) {
+                e.preventDefault();  // Previne o comportamento padrão do contexto
                 map.removeLayer(circle);  // Remove o círculo do mapa
                 map.removeLayer(marker);  // Remove o marcador do mapa
                 circles = circles.filter(c => c.circle !== circle);  // Remove da lista de círculos
