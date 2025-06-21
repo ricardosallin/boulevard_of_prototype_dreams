@@ -27,22 +27,43 @@ def ponto_dentro_do_circulo(lon, lat, centro_circulo, raio_graus):
     return ((lon - lon_centro)**2 + (lat - lat_centro)**2) ** 0.5 <= raio_graus
 
 def calcular_populacao_no_circulo_rapido(centro_circulo, raio_km, transform, densidade):
+    # Calcular a Bounding Box para o círculo
     lon_min, lon_max, lat_min, lat_max = calcular_bounding_box(centro_circulo, raio_km)
+    
+    # Converter as coordenadas da Bounding Box para índices no raster
     linha_min, coluna_min = coordenadas_para_indice(lon_min, lat_min, transform)
     linha_max, coluna_max = coordenadas_para_indice(lon_max, lat_max, transform)
     
+    # Garantir que os índices estão na ordem correta
     linha_min, linha_max = min(linha_min, linha_max), max(linha_min, linha_max)
     coluna_min, coluna_max = min(coluna_min, coluna_max), max(coluna_min, coluna_max)
 
+    # Verificar os limites da matriz de densidade
+    linhas_totais, colunas_totais = densidade.shape
+    linha_min = max(0, linha_min)
+    linha_max = min(linhas_totais - 1, linha_max)
+    coluna_min = max(0, coluna_min)
+    coluna_max = min(colunas_totais - 1, coluna_max)
+
     populacao_total = 0
 
+    # Iterar apenas sobre as células dentro da Bounding Box
     for row in range(linha_min, linha_max + 1):
         for col in range(coluna_min, coluna_max + 1):
+            # Converter índice de volta para coordenadas geográficas
             lon, lat = transform * (col, row)
+            
+            # Verificar se o ponto está dentro do círculo
             if ponto_dentro_do_circulo(lon, lat, centro_circulo, raio_km / 111):
-                populacao_total += densidade[row, col]
+                try:
+                    # Adicionar a densidade da célula à população total
+                    populacao_total += densidade[row, col]
+                except IndexError:
+                    # No caso de erro de índice, ignore essa célula
+                    print(f"Índice fora dos limites: row={row}, col={col}")
 
     return populacao_total
+
 
 # Rota para calcular a população dentro de um círculo
 @app.route('/calcular_populacao', methods=['POST'])
