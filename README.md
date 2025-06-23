@@ -31,8 +31,8 @@ Status dos projetos:
 
 | Grupo | Nome | Tema | Status |
 |-------|------|------|--------|
-| Pythonices | [Shoelace Simulator](./shoelace-simulator) | Geometria | ✅ Pronto |
-| Pythonices | [Círculos no Mapa](./map-circles) | Geometria, população | ✅ Pronto |
+| Pythonices | [Shoelace Simulator](./python/shoelace-simulator) | Geometria | ✅ Pronto |
+| Pythonices | [Círculos no Mapa](./python/map-circles) | Geometria, população | ✅ Pronto |
 
 ---
 
