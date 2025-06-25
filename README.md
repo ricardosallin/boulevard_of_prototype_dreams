@@ -27,7 +27,7 @@ Como transformar literatura em estampa de camiseta?
 
 Status dos projetos:
 | emoji | status | significado | Ainda tem curiosidade? | Ainda tá mexendo? | Tem bastante coisa feita? |
-|-------|--------|-------------||||
+|-------|--------|-------------|-------|-------|-------|
 | ✅ | Pronto | Sallin fez o que queria fazer e já matou a curiosidade que teve. Pode até ter melhorias para algum futuro | ⛔ | ⛔ | 👍 |
 | 🛠️ | Mexendo | Sallin anda mexendo nesse projeto, provavelmente tem Commits recentes (status volátil, talvez nem seja usado na prática) | 👍 | 👍 | 🤷 |
 | 👕 | Parado | Sallin não mexeu mais, mas ainda tem curiosidade. Mas fez bastante coisa | 👍 | ⛔ | 👍 |
