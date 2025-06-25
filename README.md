@@ -26,13 +26,13 @@ Como transformar literatura em estampa de camiseta?
 ---
 
 Status dos projetos:
-| emoji | status | significado |
-|-------|--------|-------------|
-| ✅ | Pronto | Sallin não pretende mais mexer (muito) no projeto. Pode até ser q tenha melhorias ou outras ideias, quem sabe um dia ele resolve pegar pra fazer, mas a princípio o projeto já "deu o que tinha que dar" (Sallin já matou a curiosidade que teve com ele) |
-| 🛠️ | Mexendo | Sallin anda mexendo nesse projeto, provavelmente tem Commits recentes (mas o próprio status ele não sabe se vai ficar atualizando toda hora direitinho: talvez nem seja usado na prática) |
-| 👕 | Parado | Sallin não tá mais mexendo, mas ainda tem curiosidades do Sallin. (provavelmente veio alguma Outra Grande Coisa na frente) |
-| 🧪 | Protótipo  | Sallin deu só o chute inicial mas (por enquanto) não mexeu mais, mas ainda quer mexer (provavelmente foi só alguma curiosidade aleatória que talvez nem dê mais nada mesmo) |
-| 🧠 | Reflexão | Sallin teve alguma ideia e trocou uma ideia com o GPT. Ele até ficou uns dias com isso na cabeça, mas não pretende fazer mais nada |
+| emoji | status | significado | Ainda tem curiosidade? | Ainda tá mexendo? | Tem bastante coisa feita? |
+|-------|--------|-------------||||
+| ✅ | Pronto | Sallin fez o que queria fazer e já matou a curiosidade que teve. Pode até ter melhorias para algum futuro |⛔|⛔|👍|
+| 🛠️ | Mexendo | Sallin anda mexendo nesse projeto, provavelmente tem Commits recentes (status volátil, talvez nem seja usado na prática) |👍|👍|🤷|
+| 👕 | Parado | Sallin não mexeu mais, mas ainda tem curiosidade. Mas fez bastante coisa |👍|⛔|👍|
+| 🧪 | Protótipo | Sallin não mexeu mais, mas ainda tem curiosidade. Mas deu só o chute inicial |👍|⛔|⛔|
+| 🧠 | Reflexão | Sallin teve alguma ideia e o GPT veio junto. Não pretende fazer mais nada |⛔|⛔|🤷|
 
 ---
 
@@ -46,10 +46,10 @@ Status dos projetos:
 | [Feromônios em SQL](./sql/feromonios-sql) | Demografia, simulação, SQL | 🧠 |
 | [Gini Index and Waterlines](./sql/gini-waterline) | Redistribuição, Gini, Economia, SQL | ✅ |
 | [Curso SQL Revolts](./sql/sql-revolts) | SQL, crítica social foda | 👕 | 
-| [SQLeslie](./sql/sqleslie) | Matrizes de Leslie em SQL+Streamlit | 🧠 |
-| [Table Similarity SQL](./sql/table-similarity) | SQL | 👕 Em desenvolvimento |
-| [Detectando sequências no SQL](./sql/sequence-detection-sql) | SQL | 👕 Em desenvolvimento |
-| [Interpolando valores faltantes no SQL](./sql/value-interpolation-sql) | SQL | 👕 Em desenvolvimento |
+| [SQLeslie](./sql/sqleslie) | Matrizes de Leslie em SQL+Streamlit | 🧪 |
+| [Table Similarity SQL](./sql/table-similarity) | SQL | 👕 |
+| [Detectando sequências no SQL](./sql/sequence-detection-sql) | SQL | 👕 |
+| [Interpolando valores faltantes no SQL](./sql/value-interpolation-sql) | SQL | 👕 |
 |python||
 | [Criando um DB Agent](./python/ia/criando-db-agent) | Redes Neurais, Python | 👕 |
 | [LLM's na Unha](./python/ia/llms-na-unha) | Redes Neurais, Python, Excel | 👕 |
