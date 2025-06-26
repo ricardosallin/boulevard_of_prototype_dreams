@@ -1,4 +1,4 @@
-# 💰 Tributação e Estrutura Social
+# 💰 Tributação de Bens Pessoais e Estrutura Social
 
 **Ensaio conversacional baseado em diálogo com ChatGPT**  
 Link original da conversa: [Acesso aqui](https://chatgpt.com/c/676f0228-1e1c-800d-89d3-b194f43a41d1)
@@ -35,9 +35,9 @@ A partir dessa pergunta, o GPT ajudou a destrinchar os diferentes sub-temas.
 
 ## ✍️ Comentários pessoais
 
-> A pergunta inicial por "categorias de bens" levou ao entendimento de todo um Framework de tributação que, em tese, vale para qualquer produto ou serviço que exista ou venha a ser criado
+- A pergunta inicial por "categorias de bens" levou ao entendimento de todo um Framework de tributação que, em tese, vale para qualquer produto ou serviço que exista ou venha a ser criado
 
-> Apesar de não entrar nisso diretamente, ficou claro que existe um ingrediente político nas decisões de tributação
+- Apesar de não entrar nisso diretamente, ficou claro que existe um ingrediente político nas decisões de tributação
 
 ---
 

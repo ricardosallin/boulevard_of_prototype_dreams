@@ -20,8 +20,9 @@ Como transformar literatura em estampa de camiseta?
 
 | Grupo | Nome | Tema | Status |
 |-------|------|------|--------|
-| Pythonices | [Shoelace Simulator](./python/shoelace-simulator) | Geometria | ✅ |
-| Pythonices | [Círculos no Mapa](./python/map-circles) | Geometria, população | ✅ |
+| Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | Geometria | ✅ |
+| Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | Geometria, população | ✅ |
+| Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | Economia, conceitos | 🧠 |
 
 ---
 
@@ -32,7 +33,7 @@ Status dos projetos:
 | 🛠️ | Mexendo | Sallin anda mexendo nesse projeto, provavelmente tem Commits recentes (status volátil, talvez nem seja usado na prática) | 👍 | 👍 | 🤷 |
 | 👕 | Parado | Sallin não mexeu mais, mas ainda tem curiosidade. Mas fez bastante coisa | 👍 | ⛔ | 👍 |
 | 🧪 | Protótipo | Sallin não mexeu mais, mas ainda tem curiosidade. Mas deu só o chute inicial | 👍 | ⛔ | ⛔ |
-| 🧠 | Reflexão | Sallin teve alguma ideia e o GPT veio junto. Não pretende fazer mais nada | ⛔ | ⛔ | 🤷 |
+| 🧠 | Reflexão | Sallin teve alguma ideia e o GPT veio junto. Não pretende fazer mais nada, só se vier mais alguma reflexão | ⛔ | ⛔ | 🤷 |
 
 ---
 
@@ -41,57 +42,56 @@ Status dos projetos:
 | Nome | Tema | Status |
 |------|------|--------|
 |sql||
-| [TGSS](./sql/tgss) | Demografia, simulação, SQL | 🛠️ |
-| [Imagens em BD](./sql/db-image) | Gráficos, SQL | 🧪 |
-| [Feromônios em SQL](./sql/feromonios-sql) | Demografia, simulação, SQL | 🧠 |
-| [Gini Index and Waterlines](./sql/gini-waterline) | Redistribuição, Gini, Economia, SQL | ✅ |
-| [Curso SQL Revolts](./sql/sql-revolts) | SQL, crítica social foda | 👕 | 
-| [SQLeslie](./sql/sqleslie) | Matrizes de Leslie em SQL+Streamlit | 🧪 |
-| [Table Similarity SQL](./sql/table-similarity) | SQL | 👕 |
-| [Detectando sequências no SQL](./sql/sequence-detection-sql) | SQL | 👕 |
-| [Interpolando valores faltantes no SQL](./sql/value-interpolation-sql) | SQL | 👕 |
+| [TGSS](./exatas/sql/tgss) | Demografia, simulação, SQL | 🛠️ |
+| [Imagens em BD](./exatas/sql/db-image) | Gráficos, SQL | 🧪 |
+| [Feromônios em SQL](./exatas/sql/feromonios-sql) | Demografia, simulação, SQL | 🧠 |
+| [Gini Index and Waterlines](./exatas/sql/gini-waterline) | Redistribuição, Gini, Economia, SQL | ✅ |
+| [Curso SQL Revolts](./exatas/sql/sql-revolts) | SQL, crítica social foda | 👕 | 
+| [SQLeslie](./exatas/sql/sqleslie) | Matrizes de Leslie em SQL+Streamlit | 🧪 |
+| [Table Similarity SQL](./exatas/sql/table-similarity) | SQL | 👕 |
+| [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | SQL | 👕 |
+| [Interpolando valores faltantes no SQL](./exatas/sql/value-interpolation-sql) | SQL | 👕 |
 |python||
-| [Criando um DB Agent](./python/ia/criando-db-agent) | Redes Neurais, Python | 👕 |
-| [LLM's na Unha](./python/ia/llms-na-unha) | Redes Neurais, Python, Excel | 👕 |
-| [Monitorar API](./python/api-monitor) | Python, APIs | 🧪 |
-| [Remakes Atari no p5.js](./python/atari-p5js) | Games Retrô, p5.js | 👕 |
-| [Analisador de Múltiplas Variáveis](./python/multiple-variable-analyzer) | Scores, Versus, Python | 🧪 |
-| [Automatic Databases](./python/automatic-databases) | Python, SQL | 👕 |
-| [Clusterização de Cidades](./python/city-clustering) | Demografia, Python | 🧪 |
-| [Simulação de Empresa](./python/corporation-simulation) | SQL | 🧪 |
-| [Cortes Diagonais em Quadrados](./python/cortes-diagonais-quadrados) | Geometria | 🧪 |
-| [Cálculo de Mapa Astral](./python/mapa-astral) | Astrologia, Python | ✅ |
-| [Monte Carlo e P-Valor](./python/monte-carlo-alinhamentos) | Geometria, probabilidade | ✅ |
-| [ETL Simples](./python/simple-etl) | Python | 🧪 |
-| [Treemap na Unha](./python/treemap-na-unha) | Geometria | 🧪 |
-| [Urbanismo Sintético](./python/urbanismo-sintetico) | Tráfego, simulação | 🧪 |
-| [8-bit Graphics - Finding wrong color pixels](./python/nes-map-stitcher/8bit-graphics-tools-pixels) | Python, Gráficos | 🧪 |
-| [8-bit Graphics - Distinct Colors](./python/nes-map-stitcher/8bit-graphics-tools-distinct) | Python, Gráficos | ✅ |
-| [Corte de Imagens JPG](./python/nes-map-stitcher/8bit-graphics-tools-cuts) | Python, Gráficos | ✅ |
-| [Nes Map Sticher](./python/nes-map-stitcher) | Python, PNG, 8-bit | 🧪 |
+| [Criando um DB Agent](./exatas/python/ia/criando-db-agent) | Redes Neurais, Python | 👕 |
+| [LLM's na Unha](./exatas/python/ia/llms-na-unha) | Redes Neurais, Python, Excel | 👕 |
+| [Monitorar API](./exatas/python/api-monitor) | Python, APIs | 🧪 |
+| [Remakes Atari no p5.js](./exatas/python/atari-p5js) | Games Retrô, p5.js | 👕 |
+| [Analisador de Múltiplas Variáveis](./exatas/python/multiple-variable-analyzer) | Scores, Versus, Python | 🧪 |
+| [Automatic Databases](./exatas/python/automatic-databases) | Python, SQL | 👕 |
+| [Clusterização de Cidades](./exatas/python/city-clustering) | Demografia, Python | 🧪 |
+| [Simulação de Empresa](./exatas/python/corporation-simulation) | SQL | 🧪 |
+| [Cortes Diagonais em Quadrados](./exatas/python/cortes-diagonais-quadrados) | Geometria | 🧪 |
+| [Cálculo de Mapa Astral](./exatas/python/mapa-astral) | Astrologia, Python | ✅ |
+| [Monte Carlo e P-Valor](./exatas/python/monte-carlo-alinhamentos) | Geometria, probabilidade | ✅ |
+| [ETL Simples](./exatas/python/simple-etl) | Python | 🧪 |
+| [Treemap na Unha](./exatas/python/treemap-na-unha) | Geometria | 🧪 |
+| [Urbanismo Sintético](./exatas/python/urbanismo-sintetico) | Tráfego, simulação | 🧪 |
+| [8-bit Graphics - Finding wrong color pixels](./exatas/python/nes-map-stitcher/8bit-graphics-tools-pixels) | Python, Gráficos | 🧪 |
+| [8-bit Graphics - Distinct Colors](./exatas/python/nes-map-stitcher/8bit-graphics-tools-distinct) | Python, Gráficos | ✅ |
+| [Corte de Imagens JPG](./exatas/python/nes-map-stitcher/8bit-graphics-tools-cuts) | Python, Gráficos | ✅ |
+| [Nes Map Sticher](./exatas/python/nes-map-stitcher) | Python, PNG, 8-bit | 🧪 |
 |economia||
-| [Consumo de água](./economia/consumo-agua) | Chutes ponderados | 🧠 |
-| [Consumo de energia](./economia/consumo-energia) | Chutes ponderados | 🧠 |
-| [Delineando o desemprego](./economia/desemprego-conceitos) | Economia, conceitos | 🧠 |
-| [Oferta e Demanda na prática](./economia/oferta-demanda-pratica) | Economia, conceitos | 🧠 |
-| [Business Plan - Tofu](./economia/tofu-master) | Economia, proteínas | 🧠 |
-| [Tributação de Bens Pessoais](./economia/tributacao-bens-pessoais) | Economia, conceitos | 🧠 |
+| [Consumo de água](./humanas/economia/consumo-agua) | Chutes ponderados | 🧠 |
+| [Consumo de energia](./humanas/economia/consumo-energia) | Chutes ponderados | 🧠 |
+| [Delineando o desemprego](./humanas/economia/desemprego-conceitos) | Economia, conceitos | 🧠 |
+| [Oferta e Demanda na prática](./humanas/economia/oferta-demanda-pratica) | Economia, conceitos | 🧠 |
+| [Business Plan - Tofu](./humanas/economia/tofu-master) | Economia, proteínas | 🧠 |
 |estatistica||
-| [Simulador Chi-Squared e Yule's Q](./estatistica/chi-squared-yules-q) | Estatística, Streamlit | 👕 |
-| [Chutes Estatísticos (inferência)](./estatistica/chutes-estatisticos) | Estatística com infos parciais | 👕 |
+| [Simulador Chi-Squared e Yule's Q](./exatas/estatistica/chi-squared-yules-q) | Estatística, Streamlit | 👕 |
+| [Chutes Estatísticos (inferência)](./exatas/estatistica/chutes-estatisticos) | Estatística com infos parciais | 👕 |
 |humanas||
-| [Comunicação e logo da Audi](./humanas/comunicacao-audi) | Moda, cultura pop, ironia | 🧠 |
-| [Ensaio Sobre a Cegueira - Roteiro para Teatro](./humanas/ensaio-sobre-cegueira) | Teatro | 👕 |
-| [Feriados para quem?](./humanas/feriados-pra-quem) | Textos | ✅ |
-| [Kiss - Discografia Comentada (alguns posts)](./humanas/kiss-discografia) | Kiss, música, escrita | 🛠️ |
-| [Fulgás - Versão Ópera Rock](./humanas/opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 |
-| [Radio Gaga - Versão Ópera Rock](./humanas/opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 |
-| [Perfusão de Ideias](./humanas/perfusao-de-ideias) | Narrativas combinatoriais | 🧪 |
-| [Precursionistas](./humanas/precursionistas) | Hackers do tempo | 🧪 |
-| [Camisetas Literárias](./humanas/thisrts-literarias) | Moda, cultura pop, ironia | ✅ (novos títulos) |
-| [Resumos em TikTok](./humanas/tiktok-literature) | Moda, cultura pop, ironia | ✅ (novos títulos) |
+| [Comunicação e logo da Audi](./humanas/arte/comunicacao-audi) | Moda, cultura pop, ironia | 🧠 |
+| [Ensaio Sobre a Cegueira - Roteiro para Teatro](./humanas/arte/ensaio-sobre-cegueira) | Teatro | 👕 |
+| [Feriados para quem?](./humanas/arte/feriados-pra-quem) | Textos | ✅ |
+| [Kiss - Discografia Comentada (alguns posts)](./humanas/arte/kiss-discografia) | Kiss, música, escrita | 🛠️ |
+| [Fulgás - Versão Ópera Rock](./humanas/arte/opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 |
+| [Radio Gaga - Versão Ópera Rock](./humanas/arte/opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 |
+| [Perfusão de Ideias](./humanas/arte/perfusao-de-ideias) | Narrativas combinatoriais | 🧪 |
+| [Precursionistas](./humanas/arte/precursionistas) | Hackers do tempo | 🧪 |
+| [Camisetas Literárias](./humanas/arte/thisrts-literarias) | Moda, cultura pop, ironia | ✅ (novos títulos) |
+| [Resumos em TikTok](./humanas/arte/tiktok-literature) | Moda, cultura pop, ironia | ✅ (novos títulos) |
 |outros||
-| [Museu Sallin de PCs](./outros/museu-sallin-pcs) | PC's velhos, eletrônica | 👕 |
+| [Museu Sallin de PCs](./exatas/outros/museu-sallin-pcs) | PC's velhos, eletrônica | 👕 |
 
 ---
 
