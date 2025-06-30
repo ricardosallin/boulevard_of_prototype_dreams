@@ -18,11 +18,11 @@ Como transformar literatura em estampa de camiseta?
 
 ## 🔍 Projetos Publicados
 
-| Grupo | Nome | Tema | Status |
+| Grupo | Nome | Motivação | Status |
 |-------|------|------|--------|
-| Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | Geometria | ✅ |
-| Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | Geometria, população | ✅ |
-| Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | Economia, conceitos | 🧠 |
+| Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a fórmula do "cadarço" funcionando na prática | ✅ |
+| Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | "É pena que no Google Maps não dá pra desenhar círculos" | ✅ |
+| Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | "Se imóveis e carros são tributados, por que roupas e livros não são?" | 🧠 |
 
 ---
 
