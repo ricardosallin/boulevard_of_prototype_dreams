@@ -1,11 +1,17 @@
-WITH sequencias AS (
+WITH numerada AS (
     SELECT 
-        col, 
-        col - ROW_NUMBER() OVER (ORDER BY col) AS grupo
+        col,
+        ROW_NUMBER() OVER (ORDER BY col) AS rn
     FROM tabela
 ),
+sequencias AS (
+    SELECT
+        col,
+        (:passo * rn) - col AS grupo
+    FROM numerada
+),
 agrupado AS (
-    SELECT 
+    SELECT
         MIN(col) AS ini,
         MAX(col) AS fim,
         COUNT(*) AS qtd,
