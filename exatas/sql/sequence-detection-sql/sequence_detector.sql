@@ -18,15 +18,23 @@ WITH RECURSIVE sequencias(col, raiz, passo, lista, qtd) AS (
     s.lista || ',' || t.col,
     s.qtd + 1
   FROM sequencias s
-  JOIN tabela t
+  JOIN tabela as t
     ON t.col = s.col + s.passo
+),
+-- Pega apenas a sequência final (com maior qtd) para cada raiz
+maximas AS (
+  SELECT *
+  FROM sequencias s1
+  WHERE NOT EXISTS (
+    SELECT 1 FROM sequencias s2
+    WHERE (s1.col = s2.col or s1.raiz = s2.raiz) AND s1.qtd < s2.qtd
+  )
 )
 SELECT 
-  MIN(raiz) AS ini,
-  MAX(col) AS fim,
+  raiz AS ini,
+  col AS fim,
   qtd,
   lista AS todos
-FROM sequencias
+FROM maximas
 WHERE qtd >= 2
-GROUP BY raiz
 ORDER BY ini;
