@@ -23,6 +23,7 @@ Como transformar literatura em estampa de camiseta?
 | Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a fórmula do "cadarço" funcionando na prática | ✅ |
 | Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | "É pena que no Google Maps não dá pra desenhar círculos" | ✅ |
 | Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | "Se imóveis e carros são tributados, por que roupas e livros não são?" | 🧠 |
+| SQLzices | [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | "Procurar sequências de números em colunas esparsas no Java é fácil - mas e no SQL?" | ✅ |
 
 ---
 
@@ -49,7 +50,6 @@ Status dos projetos:
 | [Curso SQL Revolts](./exatas/sql/sql-revolts) | SQL, crítica social foda | 👕 | 
 | [SQLeslie](./exatas/sql/sqleslie) | Matrizes de Leslie em SQL+Streamlit | 🧪 |
 | [Table Similarity SQL](./exatas/sql/table-similarity) | SQL | 👕 |
-| [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | SQL | 👕 |
 | [Interpolando valores faltantes no SQL](./exatas/sql/value-interpolation-sql) | SQL | 👕 |
 |python||
 | [Criando um DB Agent](./exatas/python/ia/criando-db-agent) | Redes Neurais, Python | 👕 |
