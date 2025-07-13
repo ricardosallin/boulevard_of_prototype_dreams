@@ -23,6 +23,7 @@ Como transformar literatura em estampa de camiseta?
 | Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a fórmula do "cadarço" funcionando na prática | ✅ |
 | Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | "É pena que no Google Maps não dá pra desenhar círculos" | ✅ |
 | Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | "Se imóveis e carros são tributados, por que roupas e livros não são?" | 🧠 |
+| Economices | [Psico-Econo-Política](./humanas/economia/psico-econo-política) | "Fim da escala 6x1: e a inflação? E a política? E a cabeça do proletário?" | 🧠 |
 | SQLzices | [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | "Procurar sequências de números em colunas esparsas no Java é fácil - mas e no SQL?" | ✅ |
 
 ---
