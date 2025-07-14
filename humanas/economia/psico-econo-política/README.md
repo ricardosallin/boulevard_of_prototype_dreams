@@ -25,15 +25,13 @@ A partir dessa pergunta, o GPT ajudou a destrinchar os diferentes sub-temas.
 | 3. Sallin pegou o cerne da coisa: a técnica econômica não é sobre apenas detectar friamente os problemas, mas sobre construir caminhos pra atenuar/minimizar/neutralizar esses problemas, e por isso é uma ciência Humana e não Exata | "A economia não pode ser sequestrada pelas exatas, porque quem trabalha com modelo precisa saber pra quem esse modelo dói" |
 | 4. Sallin lembrou da frase em sua parede: "Sobre os Ombros dos Gigantes"  | GPT falou sobre "olhar pra frente com honestidade, e olhar pra trás com gratidão" |
 | 5. Sallin compartilhou um trecho de conversa no Whats sobre o contexto da perda de prestígio da CLT | - "CLT perdeu prestígio": percepção ou realidade?<br>- O neoliberalismo moldando a Geração Z<br>- Desindustrialização, serviços e a armadilha do "empreender"<br>- O “conquistador português” que mora no fundo do brasileiro<br>- Lembrou ainda q existe uma camada de culpa, medo e orgulho em tudo isso |
-| 6. Sallin compartilha o link sobre esse debate ocorrendo na novela Vale Tudo (2025)  | Complexo de vira‑lata reencenado em novela<br>- Economia capenga, autoestima oscilante<br>- Raiz colonial e manipulação simbólica<br>- Uma vilã, uma metáfora |
+| 6. Sallin compartilha o link sobre esse debate ocorrendo na novela Vale Tudo (2025)  | -Complexo de vira‑lata reencenado em novela<br>- Economia capenga, autoestima oscilante<br>- Raiz colonial e manipulação simbólica<br>- Uma vilã, uma metáfora<br><br>"Como a novela já ensinou em 1988 e volta a ensinar agora: o debate sobre o país tende a ficar mais legítimo quando a vulnerabilidade aparece" |
 
 
 ---
 
 ## 🧠 A inteligência não está em prever a merda.
-
 # Ela está em arquitetar a transição pra evitar a merda.
-
 Ou seja:
 - Entender que acabar com o 6x1 pode pressionar custos → ok, isso é técnica.
 - Concluir que, por isso, não se deve mexer nisso → isso é covardia travestida de prudência.
