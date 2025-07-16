@@ -1,17 +1,17 @@
-Você pega um Uber e vai ao shopping no feriado? então ele só é feriado pra você.
+Você pegou um Uber e foi ao shopping no feriado? Parabéns: o feriado foi só pra você.
 
-Feriados são criados para imortalizar grandes datas. Grandes pra quem? Quem decide o que é importante a ponto de virar feriado?
+Feriados são feitos para eternizar "grandes datas". Grandes pra quem, exatamente? Quem decide o que merece ser lembrado com um dia sem trabalho?
 
-Se o seu político/igreja/time favorito decretou feriado, você vai aproveitar o dia pra ficar pensando nele o dia inteiro? Ou vai apenas se divertir como em todo feriado? (Inclusive indo prestigiar seu político/igreja/time)
+Se o seu político, igreja ou time de futebol preferido decretou feriado, você vai passar o dia pensando neles com devoção? Ou vai fazer o de sempre: descansar, maratonar série, churrasco, rolê — talvez até apareça no evento, mas mais pelo pastel e a banda cover.
 
-Responda rápido: qual a diferença entre o sete de setembro e o quinze de novembro? E o nove de julho (se voce for paulista)? Quais foram as consequências desses eventos que você decorou na escola? Se não tivessem acontecido, estaríamos melhor ou pior hoje? Você não sabe. Ninguém sabe. Ninguém se importa. O feriado é só um dia pra não trabalhar. 
+Responde aí, sem colar: qual a diferença entre 7 de setembro e 15 de novembro? E 9 de julho, se você for paulista? Quais as consequências reais desses eventos que você decorou na escola? Se não tivessem acontecido, estaríamos melhores? Piores? Você não sabe. Ninguém sabe. Ninguém liga. O feriado virou só sinônimo de “não trabalhar”.
 
-Em termos econômicos: o padeiro trabalha um dia a menos, sem desconto no salário. O patrão vai embutir o custo desse dia, e o pão nosso do dia seguinte vai ficar mais caro. Isso se o padeiro for CLT, porque se não for, já trabalha todo dia mesmo. Pra ele não existe feriado.
+Na prática: o padeiro folga um dia, mas o salário cai igual. O patrão repassa o custo, e o pão do dia seguinte vem mais caro. Isso se o padeiro for CLT. Se for autônomo, já trabalha feriado, fim de semana, eclipse e lua cheia. Pra ele, feriado é lenda urbana.
 
-A China tem 5 mil anos de história. Imagine quantas guerras, mudanças de regime, governos derrubados e estabelecidos. Se cada evento desse virasse feriado, ocupariam o ano inteiro. (E eles já tem um feriado de 11 dias)
+A China tem cinco milênios de história. Imagine se cada revolução, dinastia ou golpe virasse feriado. O calendário virava um cemitério de datas “importantes”. E olha que eles já têm um feriado de 11 dias.
 
-Feriados deveriam ter data de validade. Depois de uns 100 anos da sua criação, deixariam de valer. Poderiam ficar como ponto facultativo por mais uns 50 anos, até q as gerações seguintes já nem saibam mais a diferença entre Pentecostes e Corpus Christi. 
+Feriados deveriam expirar. Depois de 100 anos, vira ponto facultativo. Depois de 150, some. Até ninguém mais saber a diferença entre Pentecostes e Corpus Christi — e ninguém sentir falta.
 
-Com isso quase todos os feriados existentes deixariam de valer: Tiradentes, Independência, República, 1932 (opa esse fica), feriados religiosos de 2 mil anos atrás... mas a Consciência Negra fica. Esse é recente. Esse é importante. Esse tem debate, tem gente q acha q não deveria ter, tem gente que nem sabe o que é. Esse feriado sim vale a pena.
+Se fosse assim, sobrariam poucos: adeus Tiradentes, Independência, Proclamação da República, 1932 (opa, esse fica). Adeus feriados religiosos de dois milênios atrás. Mas a Consciência Negra fica. Porque é recente, relevante, vivo. Ainda dá briga, ainda tem gente que nem sabe o que é. Isso é sinal de que ele importa.
 
-A propósito, hoje foi feriado. Se você foi de Uber ao shopping, então o feriado foi só pra você.
+A propósito, hoje foi feriado. Se você foi de Uber ao shopping, o feriado foi só seu.
