@@ -1,2 +1,2 @@
-Hoje é feriado. Você passeia, pede um Uber, vê loja aberta, entregador suando. Feriado pra quem? Dizem que é pra lembrar algo importante — mas importante pra quem? Você sabe a diferença entre 7/9 e 15/11? Lembra por que folga em Corpus Christi? No fundo, é só mais um dia sem bater ponto. Uns descansam, outros trabalham dobrado. E o sentido original evapora. Se é pra criar feriados, que falem do agora: saúde mental, fake news, carga tributária. Porque parar só faz sentido se a pausa tiver algo real por trás.
+Hoje é feriado. Você dorme até tarde, pede um Uber, vai ao shopping. E vê gente trabalhando em todo canto. Feriado pra quem? Se nem lembramos do motivo, talvez o único sentido da pausa seja o luxo de poder ignorar o símbolo.
 
