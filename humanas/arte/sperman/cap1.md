@@ -1,9 +1,9 @@
 # **SPERMAN**
-Capítulo 1: **Gozei. E agora?**
+# Capítulo 1: **Gozei. E agora?**
 
 ---
 
-# **CENA 1**
+## **CENA 1**
 Interior. Estúdio de Podcast. Tarde.
 
 O estúdio é escuro, com luzes LED vermelhas. Três microfones. Campari sendo servido. Quadros na parede com frases tipo "Não existe macho beta, só homem fraco". ClÓVIS ROBALDO (40), carismático, terno ajustado, sorri para a câmera.
@@ -99,7 +99,7 @@ Gozei... paz?
 
 ---
 
-**CENA 3**
+## **CENA 3**
 Interior. Estúdio de Podcast - Sala de Controle. Imediatamente após o incidente.
 
 REDPILLADOR observa a gravação do podcast em loop. Ao fundo, Juninho Pump vomita num balde. Um assessor entrega um tablet com notícias pipocando: "Coach goza ao vivo!", "Explosão de esperma no ar!", "Carga de afeto contamina estúdio!".
