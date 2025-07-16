@@ -1,26 +1,26 @@
 Feriado pra quem?
 
-Hoje é feriado. Você passeia no shopping. E pensa: feriado pra quem, afinal?
+Hoje é feriado. Você acorda tarde, pede um Uber e vai ao shopping. Vê gente trabalhando em todo canto e se pergunta: feriado pra quem?
 
-Feriado é pausa pra lembrar algo grande. Mas grande pra quem? Quem escolheu isso?
+Feriado é uma pausa solene pra lembrar algo grande. Mas grande pra quem? Quem escolheu o que merece ser folga oficial no calendário?
 
-Você homenageia o motivo do feriado ou só descansa como em qualquer outro dia livre?
+Seu político, sua religião, seu time criou o feriado. Você passa o dia pensando nisso? Ou só descansa, como faria com qualquer outro?
 
-Tente diferenciar 7/9 de 15/11. Difícil? O tempo apaga as glórias. Sobra só a folga.
+Tente agora: diferencie 7 de setembro de 15 de novembro. E o 9 de julho, se for paulista. Sem Google. Difícil, né? No fim, tudo vira só mais um dia sem bater ponto.
 
-No bolso: CLT folga e recebe. Patrão paga sem produzir. Autônomo trabalha — ou não come.
+Econômica e socialmente, o feriado é um bug: uns folgam e recebem, outros pagam e produzem menos, e muitos trabalham como sempre — ou não comem.
 
-Feriado bomba? Melhor pagar em dobro e lucrar. A CLT vira voucher pra exploração.
+Às vezes o patrão até prefere o feriado. Movimento sobe, paga em dobro, fatura mais. A CLT que devia proteger vira isca de exploração legalizada.
 
-A China tem 5 mil anos de história. Se cada evento virasse feriado, ninguém trabalhava.
+A China tem milênios de história. Se cada virada política virasse feriado, o calendário travava. E olha que eles já têm um feriado de 11 dias.
 
-Devia ter validade: 100 anos e vira ponto facultativo. Depois, esquecimento.
+Feriado devia ter validade. Cem anos de relevância, depois ponto facultativo, e fim. Quantos ainda sabem o que é Corpus Christi sem jogar no Google?
 
-Mas parar também é simbólico. Mesmo sem lembrar o porquê, a pausa une gerações.
+Mas nem tudo é cinismo. A pausa ainda tem valor simbólico. Parar, mesmo sem lembrar o porquê, conecta gerações. Marca o tempo coletivo.
 
-Alguns feriados merecem nascer. A Consciência Negra ainda incomoda — e isso é bom.
+Alguns feriados precisam continuar. Outros precisam nascer. A Consciência Negra, por exemplo, ainda incomoda — e isso é sinal de que ainda importa.
 
-Quer feriado novo? Que tal saúde mental, carga tributária ou dia da fake news?
+Quer novos feriados? Que sejam honestos: saúde mental, carga tributária, fake news. Que parem o país por algo que a gente ainda vive — ou ainda precisa entender.
 
-Se foi ao shopping de Uber, o feriado funcionou — mas só pra você.
+Se você foi ao shopping de Uber, o feriado funcionou. Não pro motorista, nem pro caixa. Mas funcionou pra você. E talvez isso defina o que é feriado.
 
