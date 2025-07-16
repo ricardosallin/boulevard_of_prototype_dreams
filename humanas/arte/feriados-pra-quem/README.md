@@ -25,8 +25,8 @@ Link original da conversa: [Acesso aqui](https://chatgpt.com/c/681306c9-cd4c-800
 
 ---
 
-## Hoje é feriado. Você dorme até tarde, pede um Uber, vai ao shopping. 
-# E vê gente trabalhando em todo canto. Feriado pra quem? Se nem lembramos do motivo, talvez o único sentido da pausa seja o luxo de poder ignorar o símbolo.
+# Hoje é feriado. Você dorme até tarde, pede um Uber, vai ao shopping. 
+## E vê gente trabalhando em todo canto. Feriado pra quem? Se nem lembramos do motivo, talvez o único sentido da pausa seja o luxo de poder ignorar o símbolo.
 
 
 ---
