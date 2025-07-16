@@ -18,4 +18,6 @@ Mas, antes que a guilhotina das efemérides entre em ação, vale ouvir o outro 
 
 É por isso que certos feriados sobrevivem. E é por isso que outros merecem nascer. A Consciência Negra, por exemplo, ainda divide opiniões — e justamente por isso é necessária. Porque enquanto houver dúvida sobre seu significado, é sinal de que o debate está vivo. E vivo é melhor do que irrelevante.
 
+Aliás, se é pra reinventar o calendário, que venham novos feriados — mas que ao menos reflitam as dores e delírios do presente. Um dia nacional da saúde mental, por exemplo, com direito a silêncio, redes sociais fora do ar e proibição de reuniões. Ou o Feriado da Carga Tributária, pra lembrar o quanto a gente paga e o quanto (não) recebe de volta. E por que não o Dia da Fake News, em memória das verdades que nunca aconteceram, mas mudaram o rumo de tudo? Feriados não precisam ser só sobre glórias passadas. Podem ser também um espelho do que ainda estamos tentando entender.
+
 Enfim, se hoje você foi ao shopping de Uber, parabéns: o feriado funcionou. Não para o motorista, nem para o caixa da loja, nem para o atendente da praça de alimentação. Mas funcionou pra você. E talvez, no fundo, seja isso que define um feriado: um privilégio rotativo travestido de celebração nacional.
