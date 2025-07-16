@@ -1,15 +1,16 @@
 # 🧬 Clóvis Robaldo / SPERMAN – origem e motivação
 
 ## 🎓 ANTES: Clóvis, o Coach da Carga Total
-- Clóvis Robaldo era um influenciador do submundo do autoaperfeiçoamento masculino. Criador do curso “Sêmen é Senso de Direção™”, vendia a ideia de que homens deviam reter o sêmen a todo custo, usar essa “energia seminal” pra dominar debates, ganhar dinheiro e “vencer na selva sexual”.
+- Clóvis Robaldo era um influenciador do submundo do autoaperfeiçoamento masculino, criador do curso “Sêmen é Senso de Direção™”
+- vendia a ideia de que homens deviam reter o sêmen a todo custo, usar essa “energia seminal” pra dominar debates, ganhar dinheiro e “vencer na selva sexual”.
 - Era obcecado por produtividade, virilidade e frases de impacto como:
 	- “Não goze! Go-ze. Vá e seja.”
 	- “Cada gota é um voto de autoconfiança.”
 - Tinha milhões de seguidores redpills, todos com nomes tipo @Machopuro87, @Rivotrilzão e @SemSentimento69.
 
 ## ⚗️ O INCIDENTE NO MÉXICO
-- Em busca da “versão definitiva de si mesmo”, Clóvis viajou pro México pra testar um suplemento experimental de espermatogênese quântica, feito por uma biohacker chamada Dra. Climax. Só que o experimento teve um efeito inesperado:
-- Seu sêmen ganhou vontade própria — começou a se multiplicar, escapando de seu controle.
+- Em busca da “versão definitiva de si mesmo”, Clóvis viajou pro México pra testar um suplemento experimental de espermatogênese quântica, feito por uma biohacker chamada Dra. Climax
+- Só que o experimento teve um efeito inesperado: seu sêmen ganhou vontade própria — começou a se multiplicar, escapando de seu controle.
 - Ele passou a ejacular involuntariamente sempre que ouvia frases redpill.
 - Cada “descarga” parecia ser uma reação fisiológica contra a desinformação.
 
