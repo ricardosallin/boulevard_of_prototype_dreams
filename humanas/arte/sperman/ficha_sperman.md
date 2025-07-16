@@ -8,6 +8,7 @@ Era o único espermatozoide da ejaculação que fez um desvio de rota só pra n�
 - Mutado por um experimento de superfertilidade com a Dra. Climax
 - Agora ejacula verdade e afeto involuntariamente
 - Quer redimir o próprio passado ajudando homens a acessarem seu Sperman interior
+- Lawful Good
 
 ## 💥 Poderes:
 - Ejaculação de empatia pressurizada

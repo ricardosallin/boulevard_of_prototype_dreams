@@ -8,6 +8,7 @@ Foi o único espermatozoide que fez dupla com outro — romperam a cauda um do o
 - Primeira a identificar o “Padrão Sperman”
 - Pragmática, sarcástica e levemente sádica com os idiotas
 - Ajuda Clóvis a lidar com seus poderes e com sua culpa
+- Chaotic Good
 
 ## 💥 Ferramentas:
 - Vibrador-IA de análise moral ("DildOS")
