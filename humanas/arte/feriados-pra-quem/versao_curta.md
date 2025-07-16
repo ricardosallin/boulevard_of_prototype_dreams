@@ -1,2 +1,2 @@
-Hoje é feriado. Você dorme até tarde, pede um Uber, vai ao shopping. E vê gente trabalhando em todo canto. Feriado pra quem? Se nem lembramos do motivo, talvez o único sentido da pausa seja o luxo de poder ignorar o símbolo.
+Acordou tarde no feriado, pediu Uber pro shopping. O motorista sorriu cansado. “Dia bom de corrida.” No fast food, o atendente disse: “Movimento tá pesado.” Voltou pra casa pensando: “Esse feriado foi ótimo.” Pra ele, foi.
 
