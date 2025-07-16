@@ -89,6 +89,7 @@ Status dos projetos:
 | [Radio Gaga - Versão Ópera Rock](./humanas/arte/opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 |
 | [Perfusão de Ideias](./humanas/arte/perfusao-de-ideias) | Narrativas combinatoriais | 🧪 |
 | [Precursionistas](./humanas/arte/precursionistas) | Hackers do tempo | 🧪 |
+| [Sperman](./humanas/arte/sperman) | Super-herói viscoso anti-redpill | 🛠️ |
 | [Camisetas Literárias](./humanas/arte/thisrts-literarias) | Moda, cultura pop, ironia | ✅ (novos títulos) |
 | [Resumos em TikTok](./humanas/arte/tiktok-literature) | Moda, cultura pop, ironia | ✅ (novos títulos) |
 |outros||
