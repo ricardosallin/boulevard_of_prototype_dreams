@@ -20,11 +20,12 @@ Como transformar literatura em estampa de camiseta?
 
 | Grupo | Nome | Motivação | Status |
 |-------|------|------|--------|
-| Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a fórmula do "cadarço" funcionando na prática | ✅ |
+| Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a tal 'Fórmula do Cadarço' funcionando na prática" | ✅ |
 | Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | "É pena que no Google Maps não dá pra desenhar círculos" | ✅ |
 | Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | "Se imóveis e carros são tributados, por que roupas e livros não são?" | 🧠 |
 | Economices | [Psico-Econo-Política](./humanas/economia/psico-econo-política) | "Fim da escala 6x1: e a inflação? E a política? E a cabeça do proletário?" | 🧠 |
 | SQLzices | [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | "Procurar sequências de números em colunas esparsas no Java é fácil - mas e no SQL?" | ✅ |
+| Textos | [Feriados pra quem?](./humanas/arte/feriados-pra-quem) | "Feriados tinham q acabar (ou não)" | ✅ |
 
 ---
 
@@ -83,7 +84,6 @@ Status dos projetos:
 |humanas||
 | [Comunicação e logo da Audi](./humanas/arte/comunicacao-audi) | Moda, cultura pop, ironia | 🧠 |
 | [Ensaio Sobre a Cegueira - Roteiro para Teatro](./humanas/arte/ensaio-sobre-cegueira) | Teatro | 👕 |
-| [Feriados para quem?](./humanas/arte/feriados-pra-quem) | Textos | ✅ |
 | [Kiss - Discografia Comentada (alguns posts)](./humanas/arte/kiss-discografia) | Kiss, música, escrita | 🛠️ |
 | [Fulgás - Versão Ópera Rock](./humanas/arte/opera-rock-fulgas) | Moda, cultura pop, ironia | 👕 |
 | [Radio Gaga - Versão Ópera Rock](./humanas/arte/opera-rock-radio-gaga) | Moda, cultura pop, ironia | 👕 |
