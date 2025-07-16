@@ -1,17 +1,21 @@
-Você pegou um Uber e foi ao shopping no feriado? Parabéns: o feriado foi só pra você.
+Feriado pra quem?
 
-Feriados são feitos para eternizar "grandes datas". Grandes pra quem, exatamente? Quem decide o que merece ser lembrado com um dia sem trabalho?
+Hoje foi feriado. Você acordou tarde, pediu um Uber e foi passear no shopping. Viu lojas abertas, filas no fast food, entregadores a mil, trabalhadores uniformizados nos corredores. E pensou: “feriado pra quem, exatamente?”
 
-Se o seu político, igreja ou time de futebol preferido decretou feriado, você vai passar o dia pensando neles com devoção? Ou vai fazer o de sempre: descansar, maratonar série, churrasco, rolê — talvez até apareça no evento, mas mais pelo pastel e a banda cover.
+Feriado, dizem, é uma pausa solene para lembrar algo grande. Uma conquista nacional, um mártir da liberdade, uma data sagrada. Mas a pergunta incômoda vem logo atrás: grande pra quem? Quem escolheu o que merece virar folga oficial?
 
-Responde aí, sem colar: qual a diferença entre 7 de setembro e 15 de novembro? E 9 de julho, se você for paulista? Quais as consequências reais desses eventos que você decorou na escola? Se não tivessem acontecido, estaríamos melhores? Piores? Você não sabe. Ninguém sabe. Ninguém liga. O feriado virou só sinônimo de “não trabalhar”.
+Talvez seu político favorito tenha instituído um feriado. Ou sua religião. Ou o time que você ama. Você passa o dia reverenciando essa causa? Pensando nela com respeito e gratidão? Ou só aproveita pra descansar, como faria com qualquer outro feriado, seja ele da Independência ou da Padroeira?
 
-Na prática: o padeiro folga um dia, mas o salário cai igual. O patrão repassa o custo, e o pão do dia seguinte vem mais caro. Isso se o padeiro for CLT. Se for autônomo, já trabalha feriado, fim de semana, eclipse e lua cheia. Pra ele, feriado é lenda urbana.
+Tente agora um exercício simples: diferenciar 7 de setembro de 15 de novembro. Difícil? E o 9 de julho, se você for paulista? Consegue dizer o que teria sido diferente se esses eventos não tivessem ocorrido? Pois é. O tempo esfarela certezas históricas. No fim, tudo se resume a mais um dia sem bater ponto.
 
-A China tem cinco milênios de história. Imagine se cada revolução, dinastia ou golpe virasse feriado. O calendário virava um cemitério de datas “importantes”. E olha que eles já têm um feriado de 11 dias.
+E do ponto de vista econômico, o feriado é um glitch curioso: o trabalhador formal folga, mas recebe; o patrão paga, mas produz menos; o autônomo, como sempre, trabalha — ou não come. Os custos se empilham e se espalham. Um pão mais caro aqui, um serviço apertado ali.
 
-Feriados deveriam expirar. Depois de 100 anos, vira ponto facultativo. Depois de 150, some. Até ninguém mais saber a diferença entre Pentecostes e Corpus Christi — e ninguém sentir falta.
+Agora pense na China. Cinco mil anos de história e um número igualmente impressionante de eventos dignos de memória. Se cada revolução ou dinastia virasse feriado, o calendário deixaria de ter dias úteis. E olha que eles já têm um feriado de 11 dias.
 
-Se fosse assim, sobrariam poucos: adeus Tiradentes, Independência, Proclamação da República, 1932 (opa, esse fica). Adeus feriados religiosos de dois milênios atrás. Mas a Consciência Negra fica. Porque é recente, relevante, vivo. Ainda dá briga, ainda tem gente que nem sabe o que é. Isso é sinal de que ele importa.
+Talvez devêssemos ser mais racionais com isso. Estabelecer uma data de validade: cem anos de relevância histórica, depois ponto facultativo, e então o esquecimento. Afinal, quantas pessoas ainda sabem o que é Corpus Christi sem dar um Google?
 
-A propósito, hoje foi feriado. Se você foi de Uber ao shopping, o feriado foi só seu.
+Mas, antes que a guilhotina das efemérides entre em ação, vale ouvir o outro lado: há valor simbólico no ato de parar. Mesmo que a origem da data se perca, a pausa carrega um peso. Ela nos lembra que o tempo também é coletivo. E que alguns marcos, ainda que esvaziados, conectam gerações como feridas que cicatrizaram — ou que ainda precisam cicatrizar.
+
+É por isso que certos feriados sobrevivem. E é por isso que outros merecem nascer. A Consciência Negra, por exemplo, ainda divide opiniões — e justamente por isso é necessária. Porque enquanto houver dúvida sobre seu significado, é sinal de que o debate está vivo. E vivo é melhor do que irrelevante.
+
+Enfim, se hoje você foi ao shopping de Uber, parabéns: o feriado funcionou. Não para o motorista, nem para o caixa da loja, nem para o atendente da praça de alimentação. Mas funcionou pra você. E talvez, no fundo, seja isso que define um feriado: um privilégio rotativo travestido de celebração nacional.
