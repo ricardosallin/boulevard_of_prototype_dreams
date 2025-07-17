@@ -25,7 +25,7 @@ A partir dessa pergunta, o GPT ajudou a destrinchar os diferentes sub-temas.
 | 6. Sallin pediu os ajustes sugeridos | GPT não conseguiu gerar o novo arquivo |
 | 7. Sallin trouxe mais dúvidas sobre PIA/PEA, trabalho não remunerado, bolsas de estudo e de pesquisa, trabalho na cadeia, e trabalho análogo à escravidão | <br> - PIA = critério etário, PEA = critério ocupacional.<br> - Trabalho não remunerado (donas de casa, cuidadores) não entra na PEA.<br> - Bolsistas e estagiários podem ou não ser classificados como ocupados, depende da função.<br> - Presos podem trabalhar, e o fazem para reduzir pena.<br> - Trabalho escravo moderno ainda existe, mas não deveria ser classificado como ocupação normal. |
 | 8. Sallin refez o gráfico considerando as novas infos | GPT propôs pequenos ajustes (que não foram aplicados rs) |
-| 9. Sallin compartilhou a notícia de 27/fev/2025 sobre os números de desemprego de jan25 publicados pelo IBGE | 10. GPT resumiu os conceitos já explicados |
+| 9. Sallin compartilhou a notícia de 27/fev/2025 sobre os números de desemprego de jan25 publicados pelo IBGE | GPT resumiu os conceitos já explicados |
 | 10. Sallin perguntou especificamente sobre o termo "trabalho voluntário" | GPT: mesma categoria dos cuidadores familiares e donas de casa |
 
 
