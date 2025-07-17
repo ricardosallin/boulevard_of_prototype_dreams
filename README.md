@@ -76,7 +76,6 @@ Status dos projetos:
 |economia||
 | [Consumo de água](./humanas/economia/consumo-agua) | Chutes ponderados | 🧠 |
 | [Consumo de energia](./humanas/economia/consumo-energia) | Chutes ponderados | 🧠 |
-| [Delineando o desemprego](./humanas/economia/desemprego-conceitos) | Economia, conceitos | 🧠 |
 | [Oferta e Demanda na prática](./humanas/economia/oferta-demanda-pratica) | Economia, conceitos | 🧠 |
 | [Business Plan - Tofu](./humanas/economia/tofu-master) | Economia, proteínas | 🧠 |
 |estatistica||
