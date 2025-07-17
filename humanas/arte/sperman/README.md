@@ -19,6 +19,12 @@ Conforme: https://chatgpt.com/c/687124be-7028-800d-a6ef-e32ee5580c4d
 - ajuda Sperman a controlar suas ejaculações e canalizá-las para o bem
 - Meio gótica e cheia de sarcasmo
 - possui um vibrador falante que funciona como IA de suporte (estilo Jarvis).
+- Frases de efeito:
+	- Afeto é código aberto. Só se compartilha, não se esgota.
+	- Consentimento radical é como firmware emocional: exige atualização constante.
+	- O Clóvis já veio com sistema operacional de culpa. Tô hackeando empatia nele.
+	- Ciência de garagem não é brincadeira. É vacina afetiva pra ideologias tóxicas.
+	- Sejamos ciborgues do carinho. Porque tecnologia sem afeto é só metal frio.
 
 ## VILÃO 1: REDPILLADOR (Carlos ‘o Campari’)
 - Coach de masculinidade
