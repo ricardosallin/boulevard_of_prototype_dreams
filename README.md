@@ -23,6 +23,7 @@ Como transformar literatura em estampa de camiseta?
 | Economices | [Tributação de Bens Pessoais](./humanas/economia/tributacao-bens-pessoais) | "Se imóveis e carros são tributados, por que roupas e livros não são?" | 🧠 |
 | Economices | [Psico-Econo-Política](./humanas/economia/psico-econo-política) | "Fim da escala 6x1: e a inflação? E a política? E a cabeça do proletário?" | 🧠 |
 | Economices | [Delineando o Desemprego](./humanas/economia/desemprego-conceitos) | "Desempregado, desocupado, desalentado...?" | 🧠 |
+| Economices | [Business Plan - Tofu](./humanas/economia/tofu-master) | "Se eu inundasse o mercado de tofu, a carne ficaria mais barata? Será que eu derrubaria o Agro-Centrão do Congresso?" | 🧠 |
 | Textos | [Feriados pra quem?](./humanas/arte/feriados-pra-quem) | "Feriados tinham q acabar (ou não)" | 🧠 |
 | SQLzices | [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | "Procurar sequências de números em colunas esparsas no Java é fácil - mas e no SQL?" | ✅ |
 | Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a tal 'Fórmula do Cadarço' funcionando na prática" | ✅ |
@@ -77,7 +78,6 @@ Status dos projetos:
 | [Consumo de água](./humanas/economia/consumo-agua) | Chutes ponderados | 🧠 |
 | [Consumo de energia](./humanas/economia/consumo-energia) | Chutes ponderados | 🧠 |
 | [Oferta e Demanda na prática](./humanas/economia/oferta-demanda-pratica) | Economia, conceitos | 🧠 |
-| [Business Plan - Tofu](./humanas/economia/tofu-master) | Economia, proteínas | 🧠 |
 |estatistica||
 | [Simulador Chi-Squared e Yule's Q](./exatas/estatistica/chi-squared-yules-q) | Estatística, Streamlit | 👕 |
 | [Chutes Estatísticos (inferência)](./exatas/estatistica/chutes-estatisticos) | Estatística com infos parciais | 👕 |
