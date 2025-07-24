@@ -42,7 +42,10 @@ Para descobrir os ganhadores dessa medalha (existem várias outras!), dada uma s
 ## 🧪 Exemplo de uso
 
 Considerando uma coluna numérica COL com os seguintes valores:
+
+```
 35, 41, 49, 51, 58, 71, 75, 79, 80, 83, 84, 111, 115, 125, 144, 145, 146, 147, 192, 193
+```
 
 Para passo=1 ele retorna:
 
