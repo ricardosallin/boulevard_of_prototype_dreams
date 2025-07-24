@@ -16,7 +16,7 @@ A partir dessa pergunta, o GPT ajudou a destrinchar os diferentes sub-temas.
 ## 🔁 Fluxo do raciocínio
 
 |Pergunta|Resposta|
-|--------|--------|
+|----|--------|
 | 1. Sallin expõe o problema: vários conjuntos uns dentro dos outros | GPT discorre sobre População Total, em Idade Ativa (PIA), Economicamente Ativa (PEA) e outros termos. Cita IBGE, OIT e OCDE como fontes confiáveis |
 | 2. Sallin pergunta sobre estudantes, aposentados, presidiários, militares, pacientes crônicos (hospitalizados ou não), informais, ambulantes, moradores de rua, e a população fora do país | GPT explicou cada uma |
 | 3. Sallin pediu um gráfico (diagrama de Venn) resumindo visualmente | GPT criou um gráfico mas não refletia corretamente as categorias |
