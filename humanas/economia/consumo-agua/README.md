@@ -25,7 +25,7 @@ No fundo é mais uma daquelas perguntas abertas do Sallin:
 [Usos de água](https://chatgpt.com/c/67bc55a2-256c-800d-9a70-9fa2c7da35bb)
 
 |Pergunta|Resposta|
-|--------|--------|
+|----|--------|
 | 1. Sallin explicou a questão | GPT enumerou 19 usos diferentes para água, com estimativas de mensuração, divididos em categorias: Residencial (6), Comercial/Serviços (2), Industrial (2), Agrícola (2), Urbano/Infra (3), Energético (2), Transporte (2) |
 | 2. Sallin propôs o cálculo de consumo total para a cidade de SP | GPT levantou a população de SP em infosanbas.com.br (site sobre saneamento básico) e também perdas de distribuição e cobertura de abastecimento, mas não conseguiu gerar outras premissas de cálculo |
 | 3. Sallin propôs calcular com "premissas razoáveis" de consumo, qtd usos, etc | GPT criou premissas para cada um dos 19 usos levantados previamente, cada um com sua metodologia de cálculo, e chegou ao total de 2,2 trilhões de litros/ano para a cidade de SP (12 milhões de pessoas). Sallin fez a conta mentalmente: isso dá 183k litros por pessoa por ano, ou 500 litros por pessoa por dia |
@@ -36,7 +36,7 @@ No fundo é mais uma daquelas perguntas abertas do Sallin:
 [Estimativa por tipo de uso no prédio](https://chatgpt.com/c/67f1630c-5c3c-800d-a4ba-32c5924438dd)
 
 |Pergunta|Resposta|
-|--------|--------|
+|----|--------|
 | 1. Sallin deu diversas métricas e detalhes do prédio onde mora (uso misto) e pediu estimativas de consumo de água | GPT quebrou o consumo em categorias conforme o uso de cada sala do prédio: Residencial fixo, Airbnb, Escritórios, Pontos turísticos, Galerias e Lojas, Áreas comuns e de Funcionários |
 | 2. Sallin pediu detalhamento dos tipos de usos em cada tipo de sala, conforme a conversa anterior | GPT detalhou |
 
