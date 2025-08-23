@@ -23,15 +23,19 @@ Conforme:
 | 2. Sallin perguntou sobre a forma física desses parâmetros: um grande "CSV" ou banco de dados? | GPT: - matrizes multidimensionais números reais<br>- formatos físicos: .h5 (HDFS) ou .pt (PyTorch)<br>- 1 milhão de parâmetros poderia ser uma matriz 1000 x 1000 |
 | 3. Sallin: como criar LLM's para ler bases de dados? | GPT: totalmente possível com embedding+RAG ou outras abordagens |
 
+
 Nesta altura o Sallin começou a pensar mais hipoteticamente (aka pirar na batata) em modelos muito pequenos :)
+
 
 |Pergunta|Resposta|
 |--------|--------|
-| 4. Sallin: o que daria pra fazer com modelos de 10, 100, 1 mil parâmetros? | GPT equações polinomiais, distinguir com dificuldade números escritos à mão (base do MNIST), detectar sujeito/verbo/objeto em frases simples, reconhecer padrões em imagens pequenas. A partir do milhão já dá pra criar frases simples |
+| 4. Sallin: o que daria pra fazer com modelos de 10, 100, 1 mil parâmetros? | GPT: equações polinomiais, distinguir com dificuldade números escritos à mão (base do MNIST), detectar sujeito/verbo/objeto em frases simples, reconhecer padrões em imagens pequenas. A partir do milhão já dá pra criar frases simples |
 | 5. Sallin começou a entender! Redes neurais são ineficientes, mas com a escala surgem **NOVAS CAPACIDADES** | GPT: É exatamente isso! Ineficiência, mas com escala vêm aprendizado de padrões adaptabilidade com generalização |
 | 6. Sallin: e o consumo computacional? | GPT <br>- treinamento: bilhões de operações de multiplicação de matrizes multidimensionais (backpropagation), muitas CPUs rodando por dias ou meses, gastando muita energia<br>- inferência (responder perguntas): é apenas o Forward Pass, bem menor, mas ainda consome<br>- Em Watts: busca no google 0,3 W / consulta ao GPT ~10-50 W / treinar um LLM gigante Gigawatts! |
 
+
 Aqui começou a parte sangrenta de código! Criar um nano-modelo
+
 
 |Pergunta|Resposta|
 |--------|--------|
