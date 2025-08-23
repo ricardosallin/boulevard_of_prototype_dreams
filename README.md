@@ -29,6 +29,7 @@ Como transformar literatura em estampa de camiseta?
 | SQLzices | [Detectando sequências no SQL](./exatas/sql/sequence-detection-sql) | "Procurar sequências de números em colunas esparsas no Java é fácil - mas e no SQL?" | ✅ |
 | Pythonices | [Shoelace Simulator](./exatas/python/shoelace-simulator) | "Queria ver a tal 'Fórmula do Cadarço' funcionando na prática" | ✅ |
 | Pythonices | [Círculos no Mapa](./exatas/python/map-circles) | "É pena que no Google Maps não dá pra desenhar círculos" | ✅ |
+| Pythonices | [LLM's na Unha](./exatas/python/ia/llms-na-unha) | "Uma rede neural com UM neurônio: no Excel?" | 👕 |
 
 ---
 
@@ -58,7 +59,6 @@ Status dos projetos:
 | [Interpolando valores faltantes no SQL](./exatas/sql/value-interpolation-sql) | SQL | 👕 |
 |python||
 | [Criando um DB Agent](./exatas/python/ia/criando-db-agent) | Redes Neurais, Python | 👕 |
-| [LLM's na Unha](./exatas/python/ia/llms-na-unha) | Redes Neurais, Python, Excel | 👕 |
 | [Monitorar API](./exatas/python/api-monitor) | Python, APIs | 🧪 |
 | [Remakes Atari no p5.js](./exatas/python/atari-p5js) | Games Retrô, p5.js | 👕 |
 | [Analisador de Múltiplas Variáveis](./exatas/python/multiple-variable-analyzer) | Scores, Versus, Python | 🧪 |
