@@ -24,7 +24,7 @@ Conforme:
 | 3. Sallin: como criar LLM's para ler bases de dados? | GPT: totalmente possível com embedding+RAG ou outras abordagens |
 
 
-Nesta altura o Sallin começou a pensar mais hipoteticamente (aka pirar na batata) em modelos muito pequenos :)
+### Nesta altura o Sallin começou a pensar mais hipoteticamente (aka pirar na batata) em modelos muito pequenos :)
 
 
 |Pergunta|Resposta|
@@ -34,7 +34,7 @@ Nesta altura o Sallin começou a pensar mais hipoteticamente (aka pirar na batat
 | 6. Sallin: e o consumo computacional? | GPT <br>- treinamento: bilhões de operações de multiplicação de matrizes multidimensionais (backpropagation), muitas CPUs rodando por dias ou meses, gastando muita energia<br>- inferência (responder perguntas): é apenas o Forward Pass, bem menor, mas ainda consome<br>- Em Watts: busca no google 0,3 W / consulta ao GPT ~10-50 W / treinar um LLM gigante Gigawatts! |
 
 
-Aqui começou a parte sangrenta de código! Criar um nano-modelo
+### Aqui começou a parte sangrenta de código! Criar um nano-modelo
 
 
 |Pergunta|Resposta|
